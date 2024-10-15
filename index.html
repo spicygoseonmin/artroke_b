@@ -23,13 +23,16 @@
     <link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg" />
     <link rel="shortcut icon" href="images/favicon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="manifest" href="images/favicon/site.webmanifest" />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
     <title>아트로크</title>
     <!-- css -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <!-- js -->
+    <script src="js/header.js"></script>
+    <script src="js/classRank.js"></script>
     <!-- Swiper 적용 -->
     <!-- link Swiper's css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
@@ -44,47 +47,23 @@
         <div class="inner">
           <div class="header-left">
             <div class="logo">
-              <img src="images/logo/logo.png" alt="로고이미지" />
+              <a href="#">
+                <img src="images/logo/logo.png" alt="로고이미지" />
+              </a>
             </div>
             <ul class="menu">
-              <li>
-                강의 카테고리<i class="fa-solid fa-angle-down"></i>
-                <ul class="category">
-                  <!-- 일반 강의 카테고리 -->
-                  <li class="class-cate-title">일반 강의<i class="fa-solid fa-angle-right"></i></li>
-                  <li>
-                    <ul class="class-cate-list">
-                      <li>소묘</li>
-                      <li>수채화</li>
-                      <li>유화</li>
-                      <li>아크릴화</li>
-                      <li>디지털 드로잉</li>
-                      <li>조소/모델링</li>
-                      <li>만화/애니메이션</li>
-                      <li>아동 미술</li>
-                      <li>공예</li>
-                      <li>포토샵/일러스트레이터</li>
-                      <li>이모티콘</li>
-                    </ul>
-                  </li>
-                  <!-- 실기 강의 카테고리 -->
-                  <li class="class-cate-title">실기 강의<i class="fa-solid fa-angle-right"></i></li>
-                  <li>
-                    <ul class="class-cate-list">
-                      <li>소묘</li>
-                      <li>서양화</li>
-                      <li>동양화</li>
-                      <li>디자인</li>
-                      <li>조소</li>
-                      <li>만화/애니메이션</li>
-                      <li>포토샵/일러스트레이터</li>
-                    </ul>
-                  </li>
-                </ul>
+              <li class="open-cate">
+                <a href="#"> 강의 카테고리<i class="fa-solid fa-angle-down"></i></a>
               </li>
-              <li>커뮤니티</li>
-              <li>뉴스</li>
-              <li>강사진소개</li>
+              <li>
+                <a href="#">커뮤니티</a>
+              </li>
+              <li>
+                <a href="#">뉴스</a>
+              </li>
+              <li>
+                <a href="#">강사진소개</a>
+              </li>
             </ul>
           </div>
           <div class="header-right">
@@ -95,16 +74,167 @@
             <!-- 로그인 -->
             <ul class="user-section">
               <!-- 로그인 버튼 -->
-              <li id="login-btn">로그인</li>
+              <li id="login-btn">
+                <a href="#">
+                  로그인
+                </a></li>
               <!-- 로그인했을떄 유저메뉴 -->
               <li id="user-profile">
-                <div class="user-img"></div>
                 <!-- 유저 아이디 출력 -->
               </li>
             </ul>
           </div>
         </div>
+        <div class="cate-background"></div>
+        <div class="cate-wrap">
+          <div class="cate-box">
+            <div class="inner">
+              <ul class="category">
+                <!-- 일반 강의 카테고리 -->
+                <li class="class-cate-title">일반 강의<i class="fa-solid fa-angle-right"></i></li>
+                <li>
+                  <ul class="class-cate-list">
+                    <li><a href="#">소묘</a></li>
+                    <li><a href="#">수채화</a></li>
+                    <li><a href="#">유화</a></li>
+                    <li><a href="#">아크릴화</a></li>
+                    <li><a href="#">디지털 드로잉</a></li>
+                    <li><a href="#">조소/모델링</a></li>
+                    <li><a href="#">만화/애니메이션</a></li>
+                    <li><a href="#">아동 미술</a></li>
+                    <li><a href="#">공예</a></li>
+                    <li><a href="#">포토샵/일러스트레이터</a></li>
+                    <li><a href="#">이모티콘</a></li>
+                  </ul>
+                </li>
+                <!-- 실기 강의 카테고리 -->
+                <li class="class-cate-title">실기 강의<i class="fa-solid fa-angle-right"></i></li>
+                <li>
+                  <ul class="class-cate-list">
+                    <li><a href="#">소묘</a></li>
+                    <li><a href="#">서양화</a></li>
+                    <li><a href="#">동양화</a></li>
+                    <li><a href="#">디자인</a></li>
+                    <li><a href="#">조소</a></li>
+                    <li><a href="#">만화/애니메이션</a></li>
+                    <li><a href="#">포토샵/일러스트레이터</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </header>
+      <!-- 비주얼 배너 -->
+      <div class="visual">
+        <div class="visual-slide">
+          <div class="swiper sw-visual">
+            <div class="swiper-wrapper" id="data-visual">
+              <!-- json -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 인기 실기 강의 -->
+      <div class="practice-class">
+        <div class="inner">
+          <h2>주간 인기 실기 강의</h2>
+          <div class="class-list">
+            <div class="swiper sw-class">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="class-img">
+                    <img src="images/main_ class_img/3.png" alt="">
+                    <span class="rank">1</span>
+                    <i class="fa-regular fa-bookmark"></i>
+                  </div>
+                  <div class="class-txt-wrap">
+                    <div class="class-title">어색한 구도는 안녕! 사물배치로 보여주는 기초 디자인의 정석</div>
+                    <div class="class-instructor-wrap">
+                      <div class="instructor-spec"></div>
+                      <div class="instructor-info">
+                        <div class="class-cate">디자인 실기</div>
+                        <div class="instructor-name">이 삭</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="class-img">
+                    <img src="images/main_ class_img/3.png" alt="">
+                    <span class="rank">1</span>
+                    <i class="fa-regular fa-bookmark"></i>
+                  </div>
+                  <div class="class-txt-wrap">
+                    <div class="class-title">어색한 구도는 안녕! 사물배치로 보여주는 기초 디자인의 정석</div>
+                    <div class="class-instructor-wrap">
+                      <div class="instructor-spec"></div>
+                      <div class="instructor-info">
+                        <div class="class-cate">디자인 실기</div>
+                        <div class="instructor-name">이 삭</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="class-img">
+                    <img src="images/main_ class_img/3.png" alt="">
+                    <span class="rank">1</span>
+                    <i class="fa-regular fa-bookmark"></i>
+                  </div>
+                  <div class="class-txt-wrap">
+                    <div class="class-title">어색한 구도는 안녕! 사물배치로 보여주는 기초 디자인의 정석</div>
+                    <div class="class-instructor-wrap">
+                      <div class="instructor-spec"></div>
+                      <div class="instructor-info">
+                        <div class="class-cate">디자인 실기</div>
+                        <div class="instructor-name">이 삭</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="class-img">
+                    <img src="images/main_ class_img/3.png" alt="">
+                    <span class="rank">1</span>
+                    <i class="fa-regular fa-bookmark"></i>
+                  </div>
+                  <div class="class-txt-wrap">
+                    <div class="class-title">어색한 구도는 안녕! 사물배치로 보여주는 기초 디자인의 정석</div>
+                    <div class="class-instructor-wrap">
+                      <div class="instructor-spec"></div>
+                      <div class="instructor-info">
+                        <div class="class-cate">디자인 실기</div>
+                        <div class="instructor-name">이 삭</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="class-img">
+                    <img src="images/main_ class_img/3.png" alt="">
+                    <span class="rank">1</span>
+                    <i class="fa-regular fa-bookmark"></i>
+                  </div>
+                  <div class="class-txt-wrap">
+                    <div class="class-title">어색한 구도는 안녕! 사물배치로 보여주는 기초 디자인의 정석</div>
+                    <div class="class-instructor-wrap">
+                      <div class="instructor-spec"></div>
+                      <div class="instructor-info">
+                        <div class="class-cate">디자인 실기</div>
+                        <div class="instructor-name">이 삭</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 인기 일반 강의 -->
+       <div class="normal-class"></div>
     </div>
   </body>
 </html>
