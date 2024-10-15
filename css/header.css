@@ -2,11 +2,15 @@
 
 .header{
     position: relative;
+    width: 100vw;
+    position: fixed;
     height: 76px;
     /* background-color: #999; */
-    box-shadow: #999 0 -5px 5px 5px;
+    box-shadow: #ccc 0 5px 5px 0px;
+    z-index: 999;
+    border-bottom: #fff solid 1px;
 }
-.header .inner{
+.header > .inner{
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -33,13 +37,12 @@
     padding-left: 35px;
 }
 .category{
-    position: absolute;
+    /* position: absolute; */
     display: flex;
-    width: 100vw;
-    left: 0;
-    top: 76px;
-    display: none;
+    width: 100%;
+    /* display: none; */
     padding: 25px 0;
+
 }
 .class-cate-title{
     margin-right: 15px;
@@ -57,7 +60,7 @@
 .class-cate-list > li{
     width: 192px;
     height: 40px;
-    padding: 10px 25px;
+    
     font-size: 14px;
     font-weight: 500;
 }
@@ -65,9 +68,62 @@
     background-color: #d7d7d7;
     border-radius: 5px;
 }
+.class-cate-list > li > a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 10px 25px;
+}
+.cate-background{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 100vw;
+    display: none;
+    transition: all 1s;
+}
+.cate-background.active{
+    background-color: rgba(0, 0, 0, 0.2);
+    display: block;
+    transition: all 1s;
+}
+.cate-wrap{
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    left: 0;
+    top: 76px;
+    overflow: hidden;
+    visibility: hidden;
+}
+/* .cate-wrap.active{
+    top: 76px;
+    visibility: visible;
+} */
+.cate-box{
+    position: absolute;
+    height: 490px;
+    width: 100%;
+    left: 0;
+    bottom: calc(490px + 76px);
+    visibility: visible;
+    background-color: #fff;
+    transition: all 0.5s;
+    box-shadow: #ccc 0 5px 5px 0px;
+
+}
+.cate-box.active{
+    visibility: visible;
+    bottom: 10px;
+}
 .header-right{
     position: relative;
     display: flex;
     align-items: center;
     font-weight: 700;
+}
+/*  */
+.search{
+    margin-right: 35px;
+    cursor: pointer;
 }
