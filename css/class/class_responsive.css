@@ -1,0 +1,34 @@
+@charset "utf-8";
+@media screen and (max-width: 1232px) {
+  .side_padding {
+    padding: 15px;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .class-info > .top-info > h1 {
+    font-size: 2.8vw;
+    height: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .class-info > .top-info {
+    margin: 0;
+    height: 8vw;
+  }
+}
+@media screen and (max-width: 420px) {
+    /* 공통영역 */
+  .side_padding {
+    padding: 10px;
+  }
+  .bottom-info {
+    flex-direction: column;
+  }
+  .class-info > .top-info {
+    height: 8vw;
+  }
+  .class-info > .top-info > h1 {
+    font-size: 3.3vw;
+    height: auto;
+  }
+}
