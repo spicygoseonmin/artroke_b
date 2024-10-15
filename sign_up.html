@@ -4,29 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>회원가입 페이지</title>
-    <link rel="stylesheet" href="css/signUp.css">
+    <link rel="stylesheet" href="css/signUp.css" />
   </head>
   <body>
     <!-- 헤더 -->
     <!-- 로그인페이지 -->
-    <img src="" alt="로고 이미지" />
-    <form>
-      <label for="text"></label>
-      <input type="text" id="userId" name="userId" placeholder="     아이디" required />
-      <br>
-      <label for="password">
-        <input type="text" id="userPassWord" name="userPassWord" placeholder="     비밀번호" required />
-      </label>
-      <br>
-      <label for="email">
-        <input type="email" id="userEmail" name="userEmail" placeholder="     이메일" required />
-      </label>
-      <br>
-      <label for="phonNunber">
-        <input type="tel" id="userNumber" name="userNumber" placeholder="     전화번호" required />
-      </label>
-      <p>인증번호</p>
-    </form>
-    <!-- 푸터 -->
+     <div class="container">
+        <img src="images/news/contest_class/1.png" alt="로고 이미지" id="logoImg">
+        <form>
+          <label for="userId"></label>
+          <input type="text" id="userId" name="userId" placeholder="     아이디" required />
+          <br />
+          <label for="userPassWord"></label>
+          <input type="text" id="userPassWord" name="userPassWord" placeholder="     비밀번호" required />
+          <br />
+          <label for="userEmail"></label>
+          <input type="email" id="userEmail" name="userEmail" placeholder="     이메일" required />
+          <br />
+          <label for="userNumber" id="phonNumber">
+            <input type="tel" id="userNumber" name="userNumber" placeholder="     전화번호" required />
+            <p id="certified">인증번호 발행</p>
+          </label>
+        </form>
+        <h2>[필수]인증약관동의</h2>
+        <ul>
+            <li><label for="allcheck"><input type="checkbox" name="checkBox" id="checkBox">전체 동의</label></li>
+            <li><label for="allcheck"><input type="checkbox" name="checkBox" id="checkBox">개인정보 수집 및 이용 등의(필수)</label><p id="show">내용보기</p></li>
+            <li><label for="allcheck"><input type="checkbox" name="checkBox" id="checkBox">서비스 이용약관 동의(필수)</label><p id="show">내용보기</p></li>
+            <li><label for="allcheck"><input type="checkbox" name="checkBox" id="checkBox">만 14세 이상입니다.(필수)</label><p id="show">내용보기</p></li>
+            <li><label for="allcheck"><input type="checkbox" name="checkBox" id="checkBox">마케팅 수신동의(선택)</label></li>
+        </ul>
+        <button id="signUpBtn">회원가입</button>
+        <!-- 푸터 -->
+     </div>
+    
   </body>
 </html>

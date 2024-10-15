@@ -15,10 +15,11 @@
 #logoImg{
     position: relative;
     display: block;
-    width: 480px;
+    width: 100%;
+    max-width: 480px;
     height: 180px;
     margin-left: auto;
-    margin-bottom: 23px;
+    margin-bottom: 40px;
 }
 #logoImg img{
     width: 100%;
@@ -27,23 +28,28 @@
 #userId,#password{
     position: relative;
     display: block;
-    width: 480px;
+    width: 100%;
+    max-width: 480px;
     height: 45px;
     margin-left: auto;
+    margin-bottom: 20px;
 }
 
 #loginBtn{
     position: relative;
     display: block;
-    width: 480px;
+    width: 100%;
+    max-width: 480px;
     height: 53px;
     margin: auto;
     background-color: black;
     color: white;
     font-size: 20px;
     cursor: pointer;
-    margin-top: 29px;
     margin-bottom: 31px;
+}
+#login-search{
+    width: 100%;
 }
 #userInfoFind{
     position: relative;
@@ -51,7 +57,7 @@
     float: right;
     cursor: pointer;
     font-size: 14px;
-    padding: 0 25px;
+    padding-left: 10px;
 }
 #loginSite{
     position: relative;
@@ -66,7 +72,8 @@
     position: relative;
     display: block;
     margin: auto;
-    width: 480px;
+    width: 100%;
+    max-width: 480px;
     height: 53px;
     background-color: #FF370B;
     color: #fff;
@@ -74,11 +81,7 @@
     font-size: 20px;
     cursor: pointer;
 }
-#idSave{
-    width: 100%;
-    font-size: 14px;
-    padding: 0 25px;
-}
+
 /*  */
 #idSave input[type="checkbox"] {
     accent-color: #FF370B;
