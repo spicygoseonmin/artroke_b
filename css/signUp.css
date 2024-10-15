@@ -1,4 +1,89 @@
 @charset "utf-8";
-p{
-    float: right;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+.container {
+  width: 100%;
+  max-width: 480px;
+  margin: auto;
+  position: relative;
+  display: block;
+}
+#logoImg {
+  position: relative;
+  display: block;
+  width: 480px;
+  height: 180px;
+  margin-left: auto;
+  margin-bottom: 23px;
+}
+#logoImg img {
+  width: 100%;
+  height: 100%;
+}
+form #userId,
+#userPassWord,
+#userEmail,
+#userNumber {
+  width: 479px;
+  height: 45px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+#phonNumber input{
+    min-width: 270px;
+}
+#certified {
+  width: 200px;
+  min-width: 150px;
+  height: 45px;
+  float: right;
+  font-size: 13px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 13px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* 전화번호 입력 필드와 인증번호 텍스트를 한 줄로 배치 */
+#phonNumber {
+  display: flex;
+  align-items: center; /* 수직 중앙 정렬 */
+}
+#phonNumber input {
+  margin-right: 10px; /* 입력 필드와 인증번호 텍스트 사이의 간격 */
+}
+#num {
+  color: #000; /* 텍스트 색상 */
+  font-size: 16px; /* 텍스트 크기 */
+}
+#show {
+  float: right;
+  cursor: pointer;
+  font-size: 12px;
+  color: #868686;
+}
+ul li label{
+  background-color: red;
+  font-size: 14px;
+  font-weight: bold;
+}
+#signUpBtn {
+  position: relative;
+  display: block;
+  width: 480px;
+  height: 53px;
+  margin: auto;
+  background-color: #ff370b;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 29px;
+  margin-bottom: 31px;
+  border-style: none;
 }
