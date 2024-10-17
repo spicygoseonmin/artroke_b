@@ -43,6 +43,87 @@
   </head>
   <body>
     <div class="wrap">
+      <header class="header">
+        <div class="inner">
+          <div class="header-left">
+            <div class="logo">
+              <a href="#">
+                <img src="images/logo/logo.png" alt="로고이미지" />
+              </a>
+            </div>
+            <ul class="menu">
+              <li class="open-cate">
+                <a href="#"> 강의 카테고리<i class="fa-solid fa-angle-down"></i></a>
+              </li>
+              <li>
+                <a href="#">커뮤니티</a>
+              </li>
+              <li>
+                <a href="#">뉴스</a>
+              </li>
+              <li>
+                <a href="#">강사진소개</a>
+              </li>
+            </ul>
+          </div>
+          <div class="header-right">
+            <!-- 검색창 -->
+            <div class="search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <!-- 로그인 -->
+            <ul class="user-section">
+              <!-- 로그인 버튼 -->
+              <li id="login-btn">
+                <a href="#"> 로그인 </a>
+              </li>
+              <!-- 로그인했을떄 유저메뉴 -->
+              <li id="user-profile">
+                <!-- 유저 아이디 출력 -->
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="cate-background"></div>
+        <div class="cate-wrap">
+          <div class="cate-box">
+            <div class="inner">
+              <ul class="category">
+                <!-- 일반 강의 카테고리 -->
+                <li class="class-cate-title">일반 강의<i class="fa-solid fa-angle-right"></i></li>
+                <li>
+                  <ul class="class-cate-list">
+                    <li><a href="#">소묘</a></li>
+                    <li><a href="#">수채화</a></li>
+                    <li><a href="#">유화</a></li>
+                    <li><a href="#">아크릴화</a></li>
+                    <li><a href="#">디지털 드로잉</a></li>
+                    <li><a href="#">조소/모델링</a></li>
+                    <li><a href="#">만화/애니메이션</a></li>
+                    <li><a href="#">아동 미술</a></li>
+                    <li><a href="#">공예</a></li>
+                    <li><a href="#">포토샵/일러스트레이터</a></li>
+                    <li><a href="#">이모티콘</a></li>
+                  </ul>
+                </li>
+                <!-- 실기 강의 카테고리 -->
+                <li class="class-cate-title">실기 강의<i class="fa-solid fa-angle-right"></i></li>
+                <li>
+                  <ul class="class-cate-list">
+                    <li><a href="#">소묘</a></li>
+                    <li><a href="#">서양화</a></li>
+                    <li><a href="#">동양화</a></li>
+                    <li><a href="#">디자인</a></li>
+                    <li><a href="#">조소</a></li>
+                    <li><a href="#">만화/애니메이션</a></li>
+                    <li><a href="#">포토샵/일러스트레이터</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
       <div class="inner">
         <div class="class">
           <!-- 클래스  -->
@@ -60,8 +141,8 @@
                 <div class="swiper-slide">Slide 8</div>
                 <div class="swiper-slide">Slide 9</div>
               </div>
-              <div class="swiper-button-next nmBtn"><i class="fa-solid fa-angle-right"></i></div>
-              <div class="swiper-button-prev pmBtn"><i class="fa-solid fa-angle-left"></i></div>
+              <div class="swiper-button-next nmBtn"><i class="fa-solid fa-chevron-right"></i></div>
+              <div class="swiper-button-prev pmBtn"><i class="fa-solid fa-chevron-left"></i></div>
             </div>
           </div>
           <div class="class-info side_padding">
@@ -90,9 +171,35 @@
               </div>
               <!-- 결재 정보 -->
               <div class="right-info">
-                <div class="pay_wrap">
-                  <button class="pBtn">한 달 수강 346,000원</button>
-                  <button class="bookmark"><i class="fa-regular fa-bookmark"></i></button>
+                <div class="ptdiv">한 달 수강 346,000원</div>
+                <div class="class_kit_set">
+                  <select id="pakage_list">
+                    <option value="0">기본 (0원)</option>
+                    <option value="385,000">미술용품 set! 패키지 (+385,000원)</option>
+                  </select>
+                </div>
+                <div class="btn_wrap">
+                  <button class="pBtn">수강신청하기</button>
+                  <button class="fBtn">무료체험하기</button>
+                </div>
+                <div class="etx_icon_button">
+                  <ul>
+                    <li>
+                      <!-- 소식알림 -->
+                      <button class="class_alram"><i class="fa-regular fa-bell"></i><span>소식받기</span></button>
+                    </li>
+                    <li>
+                      <!-- 북마크 -->
+                      <button class="class_bookmark"><i class="fa-regular fa-bookmark"></i><span>
+                        <!-- 북마크 숫자 출력 -->
+                         1020
+                      </span></button>
+                    </li>
+                    <li>
+                      <!-- 공유하기 -->
+                      <button class="class_share"><i class="fa-regular fa-paper-plane"></i><span>공유하기</span></button>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>

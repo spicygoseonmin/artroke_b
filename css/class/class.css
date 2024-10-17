@@ -9,6 +9,10 @@
   font-size: 26px;
   padding-bottom: 30px;
 }
+/* 클래스 메인 영역 */
+.class {
+  padding-top: 90px;
+}
 /* 클래스 메인 이미지 영역 */
 .sw-main-img {
   width: 100%;
@@ -39,6 +43,20 @@
   border-radius: 50%;
   font-size: 30px;
 }
+.pmBtn:hover,
+.nmBtn:hover {
+  background-color: #f0f0f0;
+}
+.pmBtn > i,
+.nmBtn > i {
+  color: #000;
+  font-size: 25px;
+}
+.pmBtn:hover > i,
+.nmBtn:hover > i {
+  color: #ff370b;
+  font-size: 25px;
+}
 .pmBtn:after,
 .nmBtn:after {
   display: none;
@@ -58,17 +76,21 @@
   text-align: center;
   width: 100%;
 }
+
 /* 기본정보 (하) 클래스 정보*/
 .bottom-info {
   border-top: 1px solid #e9e9e9;
   width: 100%;
   display: flex;
 }
+
 /* 기본정보 왼쪽 */
 .bottom-info > .left-info {
   width: 100%;
   height: 190px;
+  border-right: 1px solid #ccc;
 }
+
 /* 강사 정보 */
 .bottom-info > .left-info > .tpi {
   width: 100%;
@@ -92,6 +114,7 @@
   width: 100%;
   box-shadow: inset 0px 0px 2px 2px #00000021;
 }
+
 /* 수업 정보 */
 .bottom-info > .left-info > .tci {
   width: 100%;
@@ -110,22 +133,97 @@
   flex-wrap: wrap;
   align-items: center;
 }
+
 /* 기본정보 오른쪽 (결재 정보)*/
 .bottom-info > .right-info {
   height: 190px;
-  width: 100%;
+  width: 70%;
   padding: 5px;
-}
-.bottom-info > .right-info > .pay_wrap {
+  padding-left: 20px;
   display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
 }
-.bottom-info > .right-info > .pay_wrap > .pBtn {
+
+/* 결재 수강비 */
+.bottom-info > .right-info > .ptdiv {
+  width: 100%;
+  height: 50px;
+  background-color: #f1f1f1;
+  border: none;
+  border-radius: 3px;
+  font-size: 15px;
+  /* font-weight: 600; */
+  color: #0c0c0c;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+.class_kit_set {
+  width: 100%;
+}
+.class_kit_set > #pakage_list {
+  width: 100%;
+  height: 30px;
+  border: 1px solid #ccc;
+}
+.class_kit_set > #pakage_list:focus {
+  border: 1px solid #999999;
+  outline: none;
+}
+.bottom-info > .right-info > .btn_wrap {
+  width: 100%;
+  display: flex;
+  gap: 5px;
+}
+.bottom-info > .right-info > .btn_wrap > .pBtn {
   width: 70%;
   height: 50px;
+  background-color: #ff370b;
+  border: none;
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
 }
-.bottom-info > .right-info > .pay_wrap > .bookmark {
+.bottom-info > .right-info > .btn_wrap > .fBtn {
   width: 30%;
   height: 50px;
+  background-color: #000000;
+  border: none;
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  position: relative;
+  cursor: pointer;
+}
+/* 아이콘 리스트 */
+.etx_icon_button {
+  width: 100%;
+  margin-top: 13px;
+  /* background-color: aquamarine; */
+}
+.etx_icon_button > ul {
+  display: flex;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  justify-content: space-evenly;
+}
+.etx_icon_button > ul > li > button {
+  border: none;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.etx_icon_button > ul > li > button > i {
+  font-size: 20px;
+}
+.etx_icon_button > ul > li > button> span{
+  
 }
 
 /* 클래스 소개 메뉴 영역 */
@@ -231,6 +329,8 @@
 }
 .recommend_age > .recommend > .recommendList {
   width: 100%;
+  background-color: #fafafa;
+  padding: 10px;
 }
 .recommend_age > .recommend > .recommendList > li {
   border-bottom: 1px solid #dfdfdf;
@@ -247,6 +347,8 @@
 }
 .supplies_wrap > .supplies > .suppliesList {
   width: 100%;
+  background-color: #fafafa;
+  padding: 10px;
 }
 .supplies_wrap > .supplies > .suppliesList > li {
   font-size: 14px;
