@@ -23,8 +23,8 @@ window.addEventListener("load", function () {
     window.location.href = "sign_up.html";
   });
 
-  const logoImg = this.document.getElementById("logoImg")
-  logoImg.addEventListener("click",function(){
-    window.location.href = "index.html"
-  })
+  const logoImg = this.document.getElementById("logoImg");
+  logoImg.addEventListener("click", function () {
+    window.location.href = "index.html";
+  });
 });
