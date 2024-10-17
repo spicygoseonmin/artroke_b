@@ -10,4 +10,12 @@ window.addEventListener("load",function(){
         cateBack.classList.remove("active")
         cateBox.classList.remove("active")
     })
+    const headerLogo = this.document.querySelector(".logo")
+    headerLogo.addEventListener("click",function(){
+        window.location.href="index.html"
+    })
+    const loginMove = this.document.getElementById("login-btn")
+    loginMove.addEventListener("click",function(){
+        window.location.href="login.html"
+    })
 })
