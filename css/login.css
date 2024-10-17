@@ -5,6 +5,9 @@
   box-sizing: border-box;
   list-style: none;
 }
+input {
+  padding-left: 30px;
+}
 .container {
   width: 90%;
   max-width: 480px;
@@ -18,23 +21,29 @@
   position: relative;
   display: block;
 }
+
 #logoImg {
   position: relative;
   display: block;
-  width: 100%;
-  margin: 50px auto 50px auto;
+  width: 60%;
+  margin: 100px auto 50px auto;
+  cursor: pointer;
 }
 #logoImg img {
   width: 100%;
 }
-
+#infoInput {
+  width: 100%;
+}
 #userId,
 #password {
   position: relative;
   display: block;
-  width: 100%;
+  width: 90%;
   height: 45px;
-  margin-left: auto;
+  margin: auto;
+  border-radius: 5px;
+  font-size: 15px;
 }
 #userId {
   margin-bottom: 15px;
@@ -43,7 +52,7 @@
 #loginBtn {
   position: relative;
   display: block;
-  width: 100%;
+  width: 90%;
   height: 53px;
   margin: auto;
   background-color: black;
@@ -52,23 +61,26 @@
   cursor: pointer;
   margin-top: 20px;
   margin-bottom: 31px;
+  border-radius: 5px;
+  font-weight: bold;
 }
 #login-search {
   display: flex;
-  align-items: center; 
-  justify-content: space-between; 
-  margin: 0 5px;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  width: 90%;
 }
-#login-search p span{
+#login-search p span {
   margin: 0 7px;
 }
 #idSave {
   display: flex;
-  align-items: center; 
+  align-items: center;
   margin-left: 5px;
 }
 #idSave input {
-  margin-right: 10px; 
+  margin-right: 10px;
 }
 /*  */
 #idSave input[type="checkbox"] {
@@ -91,32 +103,38 @@
   gap: 50px;
   justify-content: center;
   cursor: pointer;
-  margin-top: 29px;
-  margin-bottom: 41px;
+  margin-top: 40px;
+  margin-bottom: 50px;
 }
 #signUpBtn {
   position: relative;
   display: block;
   margin: auto;
-  width: 100%;
+  width: 90%;
   height: 53px;
   background-color: #ff370b;
   color: #fff;
   border-style: none;
   font-size: 20px;
   cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+
 }
 
 /* 반응형 */
 @media screen and (max-width: 320px) {
   .container {
-    width: 100%;
+    width: 90%;
     margin: auto;
     position: relative;
     display: block;
   }
+  input {
+    padding-left: 30px;
+  }
   #login-form {
-    width: 90%;
+    width: 95%;
     position: relative;
     display: block;
     margin: auto;
@@ -124,8 +142,9 @@
   #logoImg {
     position: relative;
     display: block;
-    width: 85%;
+    width: 60%;
     margin: 50px auto 50px auto;
+    cursor: pointer;
   }
   #logoImg img {
     width: 100%;
@@ -134,9 +153,9 @@
   #password {
     position: relative;
     display: block;
-    width: 100%;
+    width: 90%;
     height: 45px;
-    margin-left: auto;
+    margin: auto;
   }
   #userId {
     margin-bottom: 15px;
@@ -145,68 +164,75 @@
   #loginBtn {
     position: relative;
     display: block;
-    width: 100%;
-    height: 53px;
+    width: 90%;
+    height: 50px;
     margin: auto;
     background-color: black;
     color: white;
     font-size: 20px;
     cursor: pointer;
-    margin-top: 25px;
+    margin-top: 10px;
     margin-bottom: 20px;
+    border-radius: 5px;
+    font-weight: bold;
   }
   #login-search {
     display: flex;
-    align-items: center; 
-    justify-content: space-between; 
+    align-items: center;
+    justify-content: space-between;
   }
-  #login-search p span{
-    margin: 0 7px;
+  #login-search p span {
+    margin: 0 3px;
   }
   #idSave {
     display: flex;
-    align-items: center; 
-    margin-left: 5px; 
+    align-items: center;
+    margin-left: 5px;
     font-size: 12px;
   }
   #idSave input {
-    margin-right: 10px; 
+    margin-right: 10px;
   }
   /*  */
   #idSave input[type="checkbox"] {
     accent-color: #ff370b;
+    width: 13px;
+    height: 13px;
+    text-align: center;
   }
   #userInfoFind {
     position: relative;
-  display: block;
-  float: right;
-  cursor: pointer;
-  font-size: 12px;
-  margin-right: 5px;
+    display: block;
+    float: right;
+    cursor: pointer;
+    font-size: 12px;
+    margin-right: 5px;
   }
   #loginSite {
     position: relative;
     display: flex;
-    gap: 50px;
+    gap: 40px;
     justify-content: center;
     cursor: pointer;
     margin-top: 29px;
     margin-bottom: 30px;
   }
-  #loginSite img{
-    width: 55px;
-    height: 55px;
+  #loginSite img {
+    width: 45px;
+    height: 45px;
   }
   #signUpBtn {
     position: relative;
     display: block;
     margin: auto;
-    width: 100%;
+    width: 90%;
     height: 53px;
     background-color: #ff370b;
     color: #fff;
     border-style: none;
     font-size: 20px;
     cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
   }
 }
