@@ -1,3 +1,8 @@
 @charset "utf-8";
 @import url("visual.css");
 @import url("classRank.css");
+@import url("instructorList.css");
+
+h2{
+    margin-bottom: 10px;
+}
