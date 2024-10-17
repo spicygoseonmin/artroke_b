@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="css/main.css" />
     <!-- js -->
     <script src="js/header.js"></script>
-    <script src="js/classRank.js"></script>
+    <script src="js/main.js"></script>
     <!-- Swiper 적용 -->
     <!-- link Swiper's css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
@@ -75,9 +75,8 @@
             <ul class="user-section">
               <!-- 로그인 버튼 -->
               <li id="login-btn">
-                <a href="#">
-                  로그인
-                </a></li>
+                <a href="#"> 로그인 </a>
+              </li>
               <!-- 로그인했을떄 유저메뉴 -->
               <li id="user-profile">
                 <!-- 유저 아이디 출력 -->
@@ -138,103 +137,144 @@
       <!-- 인기 실기 강의 -->
       <div class="practice-class">
         <div class="inner">
-          <h2>주간 인기 실기 강의</h2>
-          <div class="class-list">
-            <div class="swiper sw-class">
+          <div class="class-top">
+            <h2>주간 인기 실기 강의</h2>
+            <div class="slide-nav">
+              <a href="#" class="moreBt">
+                더보기 <i class="fa-regular fa-plus"></i>
+              </a>
+              <button class="slide-prev">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <button class="slide-next">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="class-list" id="data-practiceClass">
+            <!-- <div class="swiper sw-class">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <div class="class-img">
-                    <img src="images/main_ class_img/3.png" alt="">
+                  <a href="#" class="class-img">
+                    <img src="images/main_ class_img/3.png" alt="" />
                     <span class="rank">1</span>
-                    <i class="fa-regular fa-bookmark"></i>
-                  </div>
+                    <div class="mark">
+                    </div>
+                  </a>
                   <div class="class-txt-wrap">
-                    <div class="class-title">어색한 구도는 안녕! 사물배치로 보여주는 기초 디자인의 정석</div>
+                    <div class="class-title">
+                      <a href="#">
+                        어색한 구도는 안녕! 사물배치로 보여주는 기초 디자인의 정석
+                      </a></div>
                     <div class="class-instructor-wrap">
                       <div class="instructor-spec"></div>
                       <div class="instructor-info">
                         <div class="class-cate">디자인 실기</div>
+                        <div class="instructor-info-line"></div>
                         <div class="instructor-name">이 삭</div>
                       </div>
                     </div>
                   </div>
                 </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <!-- 인기 일반 강의 -->
+      <div class="normal-class">
+        <div class="inner">
+          <div class="class-top">
+            <h2>주간 인기 일반 강의</h2>
+            <div class="slide-nav">
+              <a href="#" class="moreBt">
+                더보기 <i class="fa-regular fa-plus"></i>
+              </a>
+              <button class="slide-prev">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <button class="slide-next">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="class-list" id="data-normalClass">
+            <!-- <div class="swiper sw-class">
+              <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <div class="class-img">
-                    <img src="images/main_ class_img/3.png" alt="">
+                  <a href="#" class="class-img">
+                    <img src="images/main_ class_img/3.png" alt="" />
                     <span class="rank">1</span>
-                    <i class="fa-regular fa-bookmark"></i>
-                  </div>
+                    <div class="mark">
+                    </div>
+                  </a>
                   <div class="class-txt-wrap">
-                    <div class="class-title">어색한 구도는 안녕! 사물배치로 보여주는 기초 디자인의 정석</div>
+                    <div class="class-title">
+                      <a href="#">
+                        어색한 구도는 안녕! 사물배치로 보여주는 기초 디자인의 정석
+                      </a></div>
                     <div class="class-instructor-wrap">
                       <div class="instructor-spec"></div>
                       <div class="instructor-info">
                         <div class="class-cate">디자인 실기</div>
+                        <div class="instructor-info-line"></div>
                         <div class="instructor-name">이 삭</div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="class-img">
-                    <img src="images/main_ class_img/3.png" alt="">
-                    <span class="rank">1</span>
-                    <i class="fa-regular fa-bookmark"></i>
-                  </div>
-                  <div class="class-txt-wrap">
-                    <div class="class-title">어색한 구도는 안녕! 사물배치로 보여주는 기초 디자인의 정석</div>
-                    <div class="class-instructor-wrap">
-                      <div class="instructor-spec"></div>
-                      <div class="instructor-info">
-                        <div class="class-cate">디자인 실기</div>
-                        <div class="instructor-name">이 삭</div>
-                      </div>
-                    </div>
-                  </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <!-- 강사 목록 -->
+      <div class="instructor-list-wrap">
+        <div class="inner">
+          <h2>인기 강사 목록</h2>
+        </div>
+        <div class="sw-inst-wrap">
+          <div class="swiper sw-inst">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="inst-back">
+                  <img src="images/teacher_img/background1.png" alt="">
                 </div>
-                <div class="swiper-slide">
-                  <div class="class-img">
-                    <img src="images/main_ class_img/3.png" alt="">
-                    <span class="rank">1</span>
-                    <i class="fa-regular fa-bookmark"></i>
-                  </div>
-                  <div class="class-txt-wrap">
-                    <div class="class-title">어색한 구도는 안녕! 사물배치로 보여주는 기초 디자인의 정석</div>
-                    <div class="class-instructor-wrap">
-                      <div class="instructor-spec"></div>
-                      <div class="instructor-info">
-                        <div class="class-cate">디자인 실기</div>
-                        <div class="instructor-name">이 삭</div>
-                      </div>
-                    </div>
-                  </div>
+                <div class="inner">
+                  <ul class="inst-list">
+                    <li><a href="#">
+                      <img src="" alt="">
+                    </a></li>
+                    <li><a href="#">
+                      <img src="" alt="">
+                    </a></li>
+                    <li><a href="#">
+                      <img src="" alt="">
+                    </a></li>
+                    <li><a href="#">
+                      <img src="" alt="">
+                    </a></li>
+                  </ul>
                 </div>
-                <div class="swiper-slide">
-                  <div class="class-img">
-                    <img src="images/main_ class_img/3.png" alt="">
-                    <span class="rank">1</span>
-                    <i class="fa-regular fa-bookmark"></i>
-                  </div>
-                  <div class="class-txt-wrap">
-                    <div class="class-title">어색한 구도는 안녕! 사물배치로 보여주는 기초 디자인의 정석</div>
-                    <div class="class-instructor-wrap">
-                      <div class="instructor-spec"></div>
-                      <div class="instructor-info">
-                        <div class="class-cate">디자인 실기</div>
-                        <div class="instructor-name">이 삭</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- 인기 일반 강의 -->
-       <div class="normal-class"></div>
+      <!-- 금주의 소식, 수강생 후기 -->
+      <div class="community">
+        <div class="inner">
+          <!-- 금주의 소식 -->
+          <div class="news">
+            <h2>금주의 소식</h2>
+
+          </div>
+          <!-- 수강생 후기 -->
+          <div class="review">
+            <h2>수강생 후기</h2>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
