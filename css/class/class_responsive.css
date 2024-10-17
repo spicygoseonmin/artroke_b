@@ -15,9 +15,32 @@
     margin: 0;
     height: 8vw;
   }
+  .class_s_goal > .goal > .goalList {
+    width: 100%;
+    display: flex;
+    gap: 1vw;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .class_s_goal > .goal > .goalList > li {
+    width: calc(50% - 1vw);
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+  }
+  .class_s_goal > .goal > .goalList > li > .img-wrap {
+    position: relative;
+    border-radius: 5px 5px 0 0;
+    height: 27.9vw;
+    width: 100%;
+    max-height: 210px;
+    background-color: #f3f3f3;
+    box-shadow: 0 1px 2px 1px #c7c7c7;
+    border: 1px solid #e7e7e7;
+    overflow: hidden;
+  }
 }
 @media screen and (max-width: 420px) {
-    /* 공통영역 */
+  /* 공통영역 */
   .side_padding {
     padding: 10px;
   }
