@@ -5,6 +5,9 @@
   box-sizing: border-box;
   list-style: none;
 }
+input {
+  padding-left: 30px;
+}
 .container {
   width: 90%;
   max-width: 480px;
@@ -13,83 +16,93 @@
   position: relative;
   display: block;
 }
-#login-form {
+#sign-form {
   width: 100%;
-  max-width: 480px;
-
   position: relative;
   display: block;
+  text-align: center;
+
 }
 #logoImg {
   position: relative;
   display: block;
-  width: 100%;
-  max-width: 480px;
-
-  margin-bottom: 50px;
+  width: 60%;
+  margin: 100px auto 50px auto;
+  cursor: pointer;
 }
 #logoImg img {
   width: 100%;
 }
 #consent {
-  list-style: none; 
-  padding: 0;
+  list-style: none;
+    padding: 0;
+    width: 90%;
+    margin: auto;
 }
-
+input[type="checkbox"] {
+  accent-color: #ff370b;
+  width: 15px;
+  height: 15px;
+}
 #consent li {
-  display: flex; 
-  align-items: center; 
-  justify-content: space-between; 
-  margin-bottom: 10px; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 
 #consent label {
   display: flex;
-  align-items: center; 
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
 }
 form #userId,
 #userPassWord,
 #userEmail,
 #userNumber {
-  width: 100%;
-  max-width: 480px;
+  width: 90%;
   height: 45px;
   border-radius: 5px;
   margin: 7px auto;
+  font-size: 15px;
 }
 #phonNumber input {
   margin: auto;
 }
-h2{
-  margin:25px 0
+h2 {
+  margin: 25px 0;
+  font-size: 25px;
 }
 #certified {
   width: 200px;
   height: 45px;
   float: right;
-  font-size: 13px;
+  font-size: 15px;
   background-color: #000;
   color: #fff;
   text-align: center;
-  padding: 13px 5px;
+  padding: 12px 0;
   border-radius: 5px;
   cursor: pointer;
 }
 #phonNumber {
   display: flex;
-  align-items: center; 
+  align-items: center;
+  width: 90%;
+  margin: auto;
 }
 #phonNumber input {
-  margin-right: 10px; 
+  margin-right: 10px;
 }
 #num {
-  color: #000; 
-  font-size: 16px; 
+  color: #000;
+  font-size: 16px;
 }
 .show {
   margin-left: 20px; /* '내용보기'를 오른쪽으로 밀기 */
   cursor: pointer;
-  color: #d9d9d9;
+  color: #757575;
 }
 ul li label {
   font-size: 14px;
@@ -98,9 +111,7 @@ ul li label {
 #signUpBtn {
   position: relative;
   display: block;
-  width: 100%;
-  min-width: 320px;
-  max-width: 480px;
+  width: 90%;
   height: 53px;
   margin: auto;
   background-color: #ff370b;
@@ -108,92 +119,108 @@ ul li label {
   font-size: 20px;
   cursor: pointer;
   margin-top: 29px;
-  margin-bottom: 31px;
+  margin-bottom: 100px;
   border-style: none;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
-@media screen and (max-width:320px) {
+@media screen and (max-width: 320px) {
   .container {
-    width: 100%;
-    margin: auto;
+    width: 90%;
+    margin: 5px;
     position: relative;
     display: block;
+
   }
-  #login-form {
+  input {
+    padding-left: 30px;
+  }
+  #sign-form {
     width: 90%;
+    margin: auto;
     position: relative;
     display: block;
   }
   #logoImg {
     position: relative;
     display: block;
-    width: 100%;
-    max-width: 480px;
-    min-width: 310px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    width: 60%;
+    margin: 50px auto 50px auto;
+    cursor: pointer;
   }
   #logoImg img {
     width: 100%;
   }
   #consent {
-    list-style: none; 
-    padding: 0;
+    list-style: none;
+    padding: 5px;
+    font-size: 10px;
+    width: 100%;
   }
-  
+  input[type="checkbox"] {
+    accent-color: #ff370b;
+    width: 13px;
+    height: 13px;
+  }
   #consent li {
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; 
-    margin-bottom: 10px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
   }
-  
   #consent label {
     display: flex;
-    align-items: center; 
+    align-items: center;
+    gap: 12px;
+    font-size: 12px;
   }
   form #userId,
   #userPassWord,
   #userEmail,
   #userNumber {
     width: 100%;
-    height: 45px;
+    height: 40px;
     border-radius: 5px;
     margin: 7px auto;
   }
+  
   #phonNumber input {
     margin: auto;
   }
-  h2{
-    margin:25px 0
+  h2 {
+    margin: 25px 0 15px 0;
+    font-size: 20px;
   }
   #certified {
-    width: 200px;
-    height: 45px;
+    width: 130px;
+    height: 40px;
     float: right;
-    font-size: 13px;
+    font-size: 12px;
     background-color: #000;
     color: #fff;
     text-align: center;
-    padding: 13px 5px;
+    padding: 10px 0;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: bold;
   }
   #phonNumber {
     display: flex;
-    align-items: center; 
+    align-items: center;
+    width: 100%;
   }
   #phonNumber input {
-    margin-right: 10px; 
+    margin-right: 10px;
   }
-  #num {
-    color: #000; 
-    font-size: 16px; 
+  #phonenumber {
+    color: #000;
+    font-size: 16px;
   }
   .show {
     margin-left: 20px; /* '내용보기'를 오른쪽으로 밀기 */
     cursor: pointer;
-    color: #d9d9d9;
+    color: #757575;
   }
   ul li label {
     font-size: 14px;
@@ -203,9 +230,7 @@ ul li label {
     position: relative;
     display: block;
     width: 100%;
-    min-width: 320px;
-    max-width: 480px;
-    height: 53px;
+    height: 50px;
     margin: auto;
     background-color: #ff370b;
     color: #fff;
@@ -214,5 +239,7 @@ ul li label {
     margin-top: 29px;
     margin-bottom: 31px;
     border-style: none;
+    border-radius: 5px;
+    font-weight: bold;
   }
 }
