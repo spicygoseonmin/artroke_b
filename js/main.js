@@ -17,7 +17,11 @@ window.addEventListener("load", function () {
       showPracticeClass();
       // 일반강의
       NORMAL_CLASS = obj.normalClass;
-      showNormalClass()
+      showNormalClass();
+      // 강사 소개
+      // 금주의 소식
+      NEWS = obj.news;
+      showNews()
     }
   };
   xhttp.open("GET", "data.json");
@@ -57,12 +61,12 @@ window.addEventListener("load", function () {
                   </div>
                 </div>
         `;
-        html += tag;
+      html += tag;
     });
-    html +=`
+    html += `
     </div>
     </div>
-    `
+    `;
     practiceClassTag.innerHTML = html;
     const swClass = new Swiper(".PC", {
       slidesPerView: 4,
@@ -82,17 +86,17 @@ window.addEventListener("load", function () {
       });
     });
   }
-// -------
-// 일반강의
-let NORMAL_CLASS;
-let normalClassTag = this.document.getElementById("data-normalClass")
-// 일반 강의 화면 출력 기능
-function showNormalClass(){
-  let html = `
+  // -------
+  // 일반강의
+  let NORMAL_CLASS;
+  let normalClassTag = this.document.getElementById("data-normalClass");
+  // 일반 강의 화면 출력 기능
+  function showNormalClass() {
+    let html = `
     <div class="swiper sw-class NC">
     <div class="swiper-wrapper">
     `;
-    NORMAL_CLASS.forEach(function(item){
+    NORMAL_CLASS.forEach(function (item) {
       let tag = `
         <div class="swiper-slide">
                   <a href="#" class="class-img">
@@ -117,12 +121,12 @@ function showNormalClass(){
                   </div>
                 </div>
         `;
-        html += tag;
-    })
-    html +=`
+      html += tag;
+    });
+    html += `
     </div>
     </div>
-    `
+    `;
     normalClassTag.innerHTML = html;
     const swClass = new Swiper(".NC", {
       slidesPerView: 4,
@@ -141,5 +145,27 @@ function showNormalClass(){
         item.classList.toggle("active");
       });
     });
-}
+  }
+  // 강사 소개
+  // 금주의 소식
+  let NEWS;
+  let newsTag = this.document.getElementById("data-news")
+  // 금주의 소식 화면 출력 기능
+  function showNews(){
+    let html = ``;
+    NEWS.forEach(function(item){
+      let tag = `
+      <li>
+                <h3>아트로크</h3>
+                <div class="news-info">
+                  <a href="#" class="news-title">${item.title}</a>
+                  <p class="news-date">${item.date}</p>
+                </div>
+                <div class="news-more"><a href="#">알아보기</a></div>
+              </li>
+      `
+      html += tag;
+    })
+    newsTag.innerHTML = html;
+  }
 });
