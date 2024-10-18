@@ -2,26 +2,35 @@ window.addEventListener("load", function () {
   const signForm = document.getElementById("sign-form");
   const checkNicknameBtn = document.getElementById("checkNicknameBtn");
   const userNickNameInput = document.getElementById("userNickName");
-  let isNicknameAvailable = false; // 닉네임 중복 체크 결과를 저장하는 플래그
+  let isNicknameAvailable = false;  // 닉네임 중복 체크 결과를 저장하는 플래그
+
+  // 유효성 검사 정규식
+  const userNicknameRegex = /^[a-z0-9_-가-힣]{5,8}$/;
 
   // 닉네임 중복 체크
   checkNicknameBtn.addEventListener("click", function () {
     const users = JSON.parse(localStorage.getItem("users")) || [];
     const inputNickname = userNickNameInput.value.trim();
 
+    // 닉네임 유효성 검사 먼저 실행
+    if (!userNicknameRegex.test(inputNickname)) {
+      alert("닉네임은 5자 이상 8자 이하로 입력해 주세요.");
+      return;
+    }
+
     if (!inputNickname) {
       alert("닉네임을 입력하세요.");
       return;
     }
 
-    const isDuplicate = users.some((user) => user.usernickname === inputNickname);
+    const isDuplicate = users.some(user => user.usernickname === inputNickname);
 
     if (isDuplicate) {
       alert("이미 사용 중인 닉네임입니다.");
-      isNicknameAvailable = false; // 중복된 경우 사용 불가
+      isNicknameAvailable = false;  // 중복된 경우 사용 불가
     } else {
       alert("사용 가능한 닉네임입니다.");
-      isNicknameAvailable = true; // 중복되지 않은 경우 사용 가능
+      isNicknameAvailable = true;  // 중복되지 않은 경우 사용 가능
     }
   });
 
@@ -46,7 +55,6 @@ window.addEventListener("load", function () {
     const passwordRegex = /^.{6,10}$/;
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     const phoneNumberRegex = /^\d{11}$/;
-    const userNicknameRegex = /^[a-z0-9_-가-힣]{4,8}$/;
 
     // 유효성 검사
     if (!usernameRegex.test(userName)) {
