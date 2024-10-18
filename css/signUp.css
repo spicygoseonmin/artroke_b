@@ -21,7 +21,6 @@ input {
   position: relative;
   display: block;
   text-align: center;
-
 }
 #logoImg {
   position: relative;
@@ -35,9 +34,9 @@ input {
 }
 #consent {
   list-style: none;
-    padding: 0;
-    width: 90%;
-    margin: auto;
+  padding: 0;
+  width: 90%;
+  margin: auto;
 }
 input[type="checkbox"] {
   accent-color: #ff370b;
@@ -59,27 +58,33 @@ input[type="checkbox"] {
 }
 form #userId,
 #userPassWord,
-#userEmail,
-#userNumber{
+#userEmail {
   width: 90%;
   height: 45px;
   border-radius: 5px;
   margin: 7px auto;
   font-size: 15px;
 }
-#nickAll{
+#userNumber {
+  width: 90%;
+  height: 45px;
+  border-radius: 5px;
+  margin: 7px auto;
+  font-size: 15px;
+}
+#nickAll {
   display: flex;
   align-items: center;
   width: 90%;
   margin: auto;
+  gap: 10px;
 }
-#userNickName{
+#userNickName {
   width: 90%;
   height: 45px;
   border-radius: 5px;
-  margin: 7px ;
+  margin: 7px auto;
   font-size: 15px;
-  margin-right: 10px;
 }
 #phonNumber input {
   margin: auto;
@@ -90,33 +95,33 @@ h2 {
 }
 #certified {
   width: 200px;
-    height: 45px;
-    float: right;
-    font-size: 15px;
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    padding: 12px 0;
-    border-radius: 5px;
-    cursor: pointer;
+  height: 45px;
+  float: right;
+  font-size: 15px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 12px 0;
+  border-radius: 5px;
+  cursor: pointer;
 }
-#checkNicknameBtn{
-  width: 200px;
-    height: 45px;
-    float: right;
-    font-size: 15px;
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    padding: 12px 0;
-    border-radius: 5px;
-    cursor: pointer;
+#checkNicknameBtn {
+  width: 150px;
+  height: 45px;
+  float: right;
+  font-size: 15px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 12px 0;
+  border-radius: 5px;
+  cursor: pointer;
 }
 #phonNumber {
   display: flex;
   align-items: center;
   width: 90%;
-  margin: auto;
+  margin: -15px auto;
 }
 #phonNumber input {
   margin-right: 10px;
@@ -157,7 +162,6 @@ ul li label {
     margin: 5px;
     position: relative;
     display: block;
-
   }
   input {
     padding-left: 30px;
@@ -210,19 +214,16 @@ ul li label {
     border-radius: 5px;
     margin: 7px auto;
   }
-  #nickAll{
+  #nickAll {
     display: flex;
     align-items: center;
-    width: 90%;
+    width: 100%;
     margin: auto;
   }
-  #userNickName{
-    width: 90%;
-    height: 45px;
+  #userNickName {
+    width: 100%;
+    height: 40px;
     border-radius: 5px;
-    margin: 7px ;
-    font-size: 15px;
-    margin-right: 10px;
   }
   #phonNumber input {
     margin: auto;
@@ -279,6 +280,19 @@ ul li label {
     margin-bottom: 31px;
     border-style: none;
     border-radius: 5px;
+    font-weight: bold;
+  }
+  #checkNicknameBtn {
+    width: 100px;
+    height: 40px;
+    float: right;
+    font-size: 12px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
     font-weight: bold;
   }
 }
