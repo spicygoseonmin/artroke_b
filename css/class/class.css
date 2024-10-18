@@ -146,30 +146,59 @@
 }
 
 /* 결재 수강비 */
+
 .bottom-info > .right-info > .ptdiv {
   width: 100%;
   height: 50px;
-  background-color: #f1f1f1;
+  background-color: #f1f1f19d;
   border: none;
-  border-radius: 3px;
+  border-radius: 3px 3px 0 0;
   font-size: 15px;
   /* font-weight: 600; */
   color: #0c0c0c;
   display: flex;
   /* justify-content: center; */
   align-items: center;
+  padding-left: 5px;
+  border-bottom: 1px solid #ccc;
+}
+.opc-won {
+  text-decoration: line-through;
+  padding-left: 5px;
+  color: #7a7a7a;
+}
+.spc-won {
+  font-weight: 500;
+  padding-left: 5px;
 }
 .class_kit_set {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .class_kit_set > #pakage_list {
-  width: 100%;
+  width: calc(100% - 30px);
   height: 30px;
   border: 1px solid #ccc;
 }
 .class_kit_set > #pakage_list:focus {
   border: 1px solid #999999;
   outline: none;
+}
+.i_about_pakage {
+  width: 20px;
+  height: 20px;
+}
+.i_about_pakage > img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+}
+.i_about_pakage:hover > img {
+  width: 100%;
+  height: 100%;
+  opacity:1;
 }
 .bottom-info > .right-info > .btn_wrap {
   width: 100%;
@@ -222,8 +251,8 @@
 .etx_icon_button > ul > li > button > i {
   font-size: 20px;
 }
-.etx_icon_button > ul > li > button> span{
-  
+.etx_icon_button > ul > li > button > span {
+  font-size: 11px;
 }
 
 /* 클래스 소개 메뉴 영역 */
@@ -401,7 +430,7 @@
 }
 .curriculum_wrap > .curriculum > .curriculumList > li > .c_left {
   width: 100%;
-  background-color: #e6e6e6;
+  /* background-color: #e6e6e6; */
   height: 100%;
   border-right: 2px solid #000;
   display: flex;
