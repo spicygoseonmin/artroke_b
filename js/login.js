@@ -24,7 +24,14 @@ window.addEventListener("load", function () {
   });
 
   const logoImg = this.document.getElementById("logoImg");
+  const login = this.document.getElementById("login")
+  const logoIcon = this.document.querySelector(".fa-solid fa-user")
+  const loginChange = this.document.getElementById("login-btn")
   logoImg.addEventListener("click", function () {
     window.location.href = "index.html";
   });
+  loginChange.addEventListener("click",function(){
+    document.getElementById("logoImg");
+
+  })
 });
