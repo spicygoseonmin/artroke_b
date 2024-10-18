@@ -22,6 +22,9 @@ window.addEventListener("load", function () {
       // 금주의 소식
       NEWS = obj.news;
       showNews()
+      // 수강생 후기
+      REVIEW = obj.review;
+      showReview()
     }
   };
   xhttp.open("GET", "data.json");
@@ -167,5 +170,49 @@ window.addEventListener("load", function () {
       html += tag;
     })
     newsTag.innerHTML = html;
+  }
+  // 수강생 후기
+  let REVIEW;
+  let reviewTag = this.document.getElementById("data-review")
+  // 수강생 후기 화면 출력 기능
+  function showReview(){
+    let html = `
+    <div class="swiper sw-review">
+    <div class="swiper-wrapper">
+    `
+    REVIEW.forEach(function(item){
+      let tag = `
+      <div class="swiper-slide">
+                      <a href="#" class="review-wrap">
+                        <div class="review-img">
+                          <img src="${item.img}" alt="후기 이미지" />
+                          <div class="review-ev">
+                            <p class="review-user-name">${item.userName}</p>
+                            <img src="images/review/5stars.png" alt="별점" />
+                          </div>
+                        </div>
+                        <div class="review-txt-wrap">
+                          <div class="review-class">${item.class}</div>
+                          
+                        </div>
+                      </a>
+                    </div>
+      `
+      html += tag;
+    })
+    html+=`
+    </div>
+    </div>
+    `;
+    reviewTag.innerHTML = html;
+    // 
+    const swReview = new Swiper(".sw-review", {
+      slidesPerView:1,
+      spaceBetween:10,
+      navigation: {
+        prevEl: ".review .slide-prev",
+        nextEl: ".review .slide-next",
+      },
+    });
   }
 });

@@ -74,6 +74,10 @@
 }
 .sw-review {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  /* width: 100%; */
+}
+.sw-review .swiper-slide{
+  /* width: 100%; */
 }
 .review-img {
   position: relative;
@@ -109,6 +113,7 @@
 .review-txt-wrap {
   padding: 20px;
   height: 210px;
+  /* width: 100px; */
 }
 .review-class {
   font-size: 15px;
