@@ -1,0 +1,107 @@
+@charset "utf-8";
+.wrap {
+  width: 100%;
+}
+.wrap > .c-class {
+  width: 100%;
+  padding-top: 90px;
+}
+.wrap > .c-class > .inner {
+  width: 100%;
+  display: flex;
+}
+.c-class_menu {
+  width: 230px;
+  padding-top: 15px;
+}
+.c-class_menu > .title {
+  font-size: 20px;
+  font-weight: 600;
+  padding-bottom: 14px;
+}
+.c-class_menu > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-weight: 500;
+}
+.c-class_menu > ul > li {
+  cursor: pointer;
+  color: #757575;
+}
+.c-class_menu > ul > li:hover {
+  color: #000;
+}
+.c-class_menu > ul > li.active {
+  color: #ff370b;
+  font-weight: 600;
+}
+.c-class_list {
+  width: 100%;
+  max-width: 1002px;
+}
+.c-class_list > .class_option {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #000;
+}
+.c-class_list > .class_lists {
+  width: 100%;
+  background-color: rgb(247, 247, 247);
+  padding: 2vw;
+}
+.c-class_list > .class_lists > ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.c-class_list > .class_lists > ul > li {
+  width: calc(100% / 3 - 0.6vw);
+  margin: 0.3vw;
+  height: 20vw;
+  max-height: 240px;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 2vw;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #00000020;
+  box-shadow: 0 2px 2px 0 #00000010;
+}
+.c-class_list > .class_lists > ul > li > .img_wrap {
+  width: 100%;
+  height: 14vw;
+  max-height: 170px;
+  background-color: rgb(22, 20, 161);
+  border-radius: 5px 5px 0 0;
+}
+
+@media screen and (max-width: 1232px) {
+  .c-class_menu {
+    padding: 15px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .c-class_menu {
+    display: none;
+  }
+  .c-class_list > .class_lists > ul > li {
+    height: 25vw;
+    max-height: 240px;
+  }
+  .c-class_list > .class_lists > ul > li > .img_wrap {
+    height: 18vw;
+    max-height: 170px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .c-class_list > .class_lists > ul > li {
+    width: calc(100% / 2 - 0.6vw);
+    height: 40vw;
+    max-height: 240px;
+  }
+  .c-class_list > .class_lists > ul > li > .img_wrap {
+    height: 28vw;
+    max-height: 170px;
+  }
+}
