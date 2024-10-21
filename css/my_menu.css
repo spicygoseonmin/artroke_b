@@ -218,8 +218,13 @@
 .sw_point{
   width: 100%;
   height: 250px;
-  background-color: #577cfd;
+  /* background-color: #577cfd; */
 }
 .sw_point .swiper-slide{
   background-color: #ff370b;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.sw_point .swiper-slide > img{
+width: 100%;
 }
