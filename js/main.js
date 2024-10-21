@@ -103,8 +103,13 @@ window.addEventListener("load", function () {
           spaceBetween: 10,
           slidesPerGroup: 1,
         },
-        360:{
+        420:{
           slidesPerView:1.8,
+          spaceBetween: 10,
+          slidesPerGroup: 1,
+        },
+        360:{
+          slidesPerView:1.5,
           spaceBetween: 10,
           slidesPerGroup: 1,
         },
@@ -197,8 +202,13 @@ window.addEventListener("load", function () {
           spaceBetween: 10,
           slidesPerGroup: 1,
         },
-        360:{
+        420:{
           slidesPerView:1.8,
+          spaceBetween: 10,
+          slidesPerGroup: 1,
+        },
+        360:{
+          slidesPerView:1.5,
           spaceBetween: 10,
           slidesPerGroup: 1,
         },

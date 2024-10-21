@@ -13,7 +13,8 @@
     display: block;
     height: 400px;
     width: 300px;
-    background-color: #ff4100;
+    background-color: #ff4000;
+    /* background-color: #000; */
     padding: 25px;
 }
 .contest-left-title{
