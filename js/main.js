@@ -407,14 +407,14 @@ window.addEventListener("load", function () {
           slidesPerView: 1.8,
           spaceBetween: 10,
         },
-        360:{
+        320:{
           slidesPerView: 1.5,
           spaceBetween: 10,
         },
-        320:{
-          slidesPerView: 1.2,
-          spaceBetween: 10,
-        }
+        // 320:{
+        //   slidesPerView: 1.2,
+        //   spaceBetween: 10,
+        // }
       }
     })
   }
