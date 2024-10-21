@@ -1,7 +1,4 @@
 {
-    "visual": [
-        {"img":"", "id": "v1", "link":"#"}
-    ],
     "practiceClass": [
         {
             "title":"어색한 구도는 안녕! 사물배치로 보여주는 기초 디자인의 정석",
@@ -152,6 +149,13 @@
     ],
     "practiceInstructorList":[
         {"img":""}
+    ],
+    "banner": [
+        {"img":"images/banner/banner1.png", "id": "b1", "link":"#"},
+        {"img":"images/banner/banner2.png", "id": "b1", "link":"#"},
+        {"img":"images/banner/banner3.png", "id": "b1", "link":"#"},
+        {"img":"images/banner/banner4.png", "id": "b1", "link":"#"},
+        {"img":"images/banner/banner5.png", "id": "b1", "link":"#"}
     ],
     "news":[
         {"title":"드로잉 강의(일반강의) 수강신청시 스타터키트 지원", "date":"2024. 11. 23일 까지"},

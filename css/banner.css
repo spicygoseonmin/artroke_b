@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+.banner{
+    position: relative;
+    display: block;
+padding: 50px 0 0;
+}
+.sw-banner .swiper-slide{
+    overflow: hidden;
+}
+.banner-img{
+    display: flex;
+    justify-content: center;
+}
+.sw-banner img{
+    /* display: inline-block; */
+}
