@@ -75,14 +75,68 @@
             <ul class="user-section">
               <!-- 로그인 버튼 -->
               <li id="login-btn">
-                <a href="#" id="login"> 로그인 </a>
-                <i class="fa-solid fa-user"></i>
+                <a href="#" id="loginText"> 로그인 </a>
               </li>
+              <i class="fa-solid fa-user" id="loginIcon" style="display: none"></i>
               <!-- 로그인했을떄 유저메뉴 -->
               <li id="user-profile">
                 <!-- 유저 아이디 출력 -->
               </li>
             </ul>
+            <!-- 아이콘 클릭 시 나타나는 컨테이너 -->
+            <div id="iconContainer" style="display: none">
+              <!-- 컨테이너 내용 -->
+              <div id="userInfoTop">
+                <div id="userInfo">
+                  <i class="fa-solid fa-chevron-left" id="userInfoDelete"></i>
+                  <div id="userInfoNickName">
+                    <!-- JS로 닉네임 출력 -->
+                  </div>
+                  <i class="fa-solid fa-gear" id="xhqslqkznl"></i>
+                </div>
+                <div id="userInfoSecond">
+                  <i class="fa-solid fa-user"></i>
+                  <div id="userInfoId">
+                    <!-- JS로 아이디 출력 -->
+                  </div>
+                  <div id="userInfoEmail">
+                    <!-- JS로 이메일 출력 -->
+                  </div>
+                </div>
+              </div>
+              <div id="userInfoMid">
+                <div id="userInfoNotice">
+                  <ul>
+                    <li id="notice">알림<i class="fa-solid fa-chevron-down"></i></li>
+                    <ul id="noticeNone" style="display: none">
+                      <li><p>알림내용</p></li>
+                      <li><p>알림내용</p></li>
+                      <li><p>알림내용</p></li>
+                    </ul>
+                  </ul>
+                  <ul>
+                    <li id="myTeach">나의 강좌<i class="fa-solid fa-chevron-down"></i></li>
+                    <ul id="teachList" style="display: none">
+                      <li>
+                        수강 강의 이름
+                        <p>다시보기</p>
+                      </li>
+                      <li>
+                        수강 강의 이름
+                        <p>다시보기</p>
+                      </li>
+                    </ul>
+                  </ul>
+                </div>
+                <div id="InterestedList">
+                  <p>관심목록</p>
+                  <div id="QandA">문의 / 답변</div>
+                </div>
+                <div id="logOut">
+                  <p>로그아웃</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="cate-background"></div>
@@ -271,7 +325,6 @@
         <div class="inner">
           <!-- 금주의 소식 -->
           <div class="news">
-
             <div class="news-top">
               <h2>금주의 소식</h2>
               <a href="#" class="moreBt"> 더보기 <i class="fa-regular fa-plus"></i> </a>
@@ -313,10 +366,10 @@
                 <h2>수강생 후기</h2>
                 <a href="#" class="moreBt"> 더보기 <i class="fa-regular fa-plus"></i> </a>
               </div>
-              <div class="review-area" id="data-review">
+              <div class="review-area">
                 <div class="swiper sw-review">
                   <div class="swiper-wrapper">
-                    <!-- <div class="swiper-slide">
+                    <div class="swiper-slide">
                       <a href="#" class="review-wrap">
                         <div class="review-img">
                           <img src="images/review/1.png" alt="후기 이미지" />
@@ -327,10 +380,13 @@
                         </div>
                         <div class="review-txt-wrap">
                           <div class="review-class">그림과 친해지는 법, 매일 그려보는 라인 드로잉</div>
-                          <div class="review-content">기초 라인드로잉 강의를 수강한 후, 기본기를 제대로 다질 수 있어 매우 만족스럽습니다. 연필을 잡는 법부터 시작해서 선의 흐름을 어떻게 잡아야 하는지, 각도와 압력에 따른 다양한 표현 방법을 배울 수 있었습니다. 강의가 단계별로 나누어져 있어, 처음에 자신감이 없던 저도 차근차근 실력을 키울 수 있었습니다.</div>
+                          <div class="review-content">
+                            기초 라인드로잉 강의를 수강한 후, 기본기를 제대로 다질 수 있어 매우 만족스럽습니다. 연필을 잡는 법부터 시작해서 선의 흐름을 어떻게 잡아야 하는지, 각도와 압력에 따른 다양한 표현 방법을 배울 수 있었습니다. 강의가 단계별로 나누어져 있어, 처음에 자신감이 없던 저도 차근차근
+                            실력을 키울 수 있었습니다.
+                          </div>
                         </div>
                       </a>
-                    </div> -->
+                    </div>
                   </div>
                 </div>
               </div>
