@@ -4,14 +4,13 @@ window.addEventListener("load", function () {
   //    console.log(xhttp);
   xhttp.onreadystatechange = function (e) {
     const req = e.target;
-    console.log(req);
+    // console.log(req);
     if (req.readyState === XMLHttpRequest.DONE) {
       const str = req.response;
       // console.log(str);
       //   json문자열로 변화 JSON.parse(str)
       let obj = JSON.parse(str);
       //   console.log(obj);
-      // 비주얼
       // 실기강의
       PRACTICE_CLASS = obj.practiceClass;
       showPracticeClass();
@@ -19,6 +18,9 @@ window.addEventListener("load", function () {
       NORMAL_CLASS = obj.normalClass;
       showNormalClass();
       // 강사 소개
+      // 배너
+      BANNER = obj.banner;
+      showBanner()
       // 금주의 소식
       NEWS = obj.news;
       showNews()
@@ -75,9 +77,43 @@ window.addEventListener("load", function () {
     `;
     practiceClassTag.innerHTML = html;
     const swClass = new Swiper(".PC", {
-      slidesPerView: 4,
-      spaceBetween: 10,
-      slidesPerGroup: 2,
+      breakpoints:{
+        1232:{
+          slidesPerView: 4,
+          spaceBetween: 10,
+          slidesPerGroup: 4,
+        },
+        768:{
+          slidesPerView:2.8,
+          spaceBetween: 10,
+          slidesPerGroup: 2,
+        },
+        720:{
+          slidesPerView:2.8,
+          spaceBetween: 10,
+          slidesPerGroup: 2,
+        },
+        600:{
+          slidesPerView:2.5,
+          spaceBetween: 10,
+          slidesPerGroup: 2,
+        },
+        480:{
+          slidesPerView:2.2,
+          spaceBetween: 10,
+          slidesPerGroup: 1,
+        },
+        360:{
+          slidesPerView:1.8,
+          spaceBetween: 10,
+          slidesPerGroup: 1,
+        },
+        320:{
+          slidesPerView:1.5,
+          spaceBetween: 10,
+          slidesPerGroup: 1,
+        },
+      },
       navigation: {
         prevEl: ".practice-class .slide-prev",
         nextEl: ".practice-class .slide-next",
@@ -135,9 +171,44 @@ window.addEventListener("load", function () {
     `;
     normalClassTag.innerHTML = html;
     const swClass = new Swiper(".NC", {
-      slidesPerView: 4,
-      spaceBetween: 10,
-      slidesPerGroup: 2,
+      breakpoints:{
+        1232:{
+          slidesPerView: 4,
+          spaceBetween: 10,
+          slidesPerGroup: 4,
+        },
+        768:{
+          slidesPerView:2.8,
+          spaceBetween: 10,
+          slidesPerGroup: 2,
+        },
+        720:{
+          slidesPerView:2.8,
+          spaceBetween: 10,
+          slidesPerGroup: 2,
+        },
+        600:{
+          slidesPerView:2.5,
+          spaceBetween: 10,
+          slidesPerGroup: 2,
+        },
+        480:{
+          slidesPerView:2.2,
+          spaceBetween: 10,
+          slidesPerGroup: 1,
+        },
+        360:{
+          slidesPerView:1.8,
+          spaceBetween: 10,
+          slidesPerGroup: 1,
+        },
+        320:{
+          slidesPerView:1.5,
+          spaceBetween: 10,
+          slidesPerGroup: 1,
+        },
+        
+      },
       navigation: {
         prevEl: ".normal-class .slide-prev",
         nextEl: ".normal-class .slide-next",
@@ -153,6 +224,30 @@ window.addEventListener("load", function () {
     });
   }
   // 강사 소개
+  // 배너
+  let BANNER;
+  let bannerTag = this.document.getElementById("data-banner");
+  // 배너 화면 출력 기능
+  function showBanner(){
+    let html = `
+    <div class="swiper sw-banner">
+    <div class="swiper-wrapper">
+    `
+    BANNER.forEach(function(item){
+      let tag = `
+      <div class="swiper-slide">
+                <a href="${item.link}" class="banner-img">
+                  <img src="${item.img}" alt="배너 이미지">
+                </a>
+              </div>
+      `
+      html += tag
+    })
+    html += `
+    </div></div>
+    `
+    bannerTag.innerHTML = html;
+  }
   // 금주의 소식
   let NEWS;
   let newsTag = this.document.getElementById("data-news")
@@ -173,6 +268,14 @@ window.addEventListener("load", function () {
       html += tag;
     })
     newsTag.innerHTML = html;
+    // 
+    const swBanner = new Swiper(".sw-banner",{
+      slidesPerView:1,
+      loop:true,
+      autoplay:{
+        delay: 5000
+      }
+    })
   }
   // 수강생 후기
   let REVIEW;
@@ -203,7 +306,7 @@ window.addEventListener("load", function () {
       `
       html += tag;
     })
-    html+=`
+    html +=`
     </div>
     </div>
     `;
@@ -275,8 +378,47 @@ window.addEventListener("load", function () {
     html += `</div></div>`
     contestTag.innerHTML = html;
     const swContest = new Swiper(".sw-contest",{
-      slidesPerView:4,
-      spaceBetween:10,
+      breakpoints: {
+        1231: {
+          slidesPerView: 4,
+          spaceBetween: 10,
+        },
+        768:{
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        720:{
+          slidesPerView: 3.5,
+          spaceBetween: 10,
+        },
+        660:{
+          slidesPerView: 3.2,
+          spaceBetween: 10,
+        },
+        600:{
+          slidesPerView: 2.8,
+          spaceBetween: 10,
+        },
+        480:{
+          slidesPerView: 2.3,
+          spaceBetween: 10,
+        },
+        420:{
+          slidesPerView: 1.8,
+          spaceBetween: 10,
+        },
+        360:{
+          slidesPerView: 1.5,
+          spaceBetween: 10,
+        },
+        320:{
+          slidesPerView: 1.2,
+          spaceBetween: 10,
+        }
+      }
     })
   }
+  
+  // 
+  
 });

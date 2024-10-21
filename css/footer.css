@@ -88,3 +88,68 @@
     font-size: 30px;
     color: #fff;
 }
+@media screen and (max-width:1231px) {
+    .ft-top{
+        display: block;
+    }
+    .ft-top-left{
+        display: flex;
+        align-items: flex-end;
+        /* justify-content: space-between; */
+    }
+    .intro-list{
+        margin: 0;
+        margin-left: 30px;
+    }
+    .ft-top-right{
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width:620px) {
+    .ft-top-left{
+        flex-direction: column;
+        align-items: center;
+    }
+    .intro-list{
+        margin-left: 0;
+        margin-top: 30px;
+    }
+    .intro-list li a{
+        font-size: 14px;
+    }
+    .cs-btns{
+        display: flex;
+        justify-content: center;
+    }
+    .ft-top-right{
+        text-align: center;
+    }
+    .ft-bottom{
+        flex-direction: column;
+        align-items: center;
+    }
+    .company-info{
+        justify-content: center;
+    }
+    .sns-list{
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .intro-list{
+        gap: 10px;
+    }
+    .company-info{
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+    .cs-btns{
+        gap: 20px;
+    }
+}
+@media screen and (max-width: 360px) {
+    .intro-list{
+        gap: 5px;
+    }
+}
