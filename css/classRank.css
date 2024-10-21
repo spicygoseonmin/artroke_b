@@ -58,7 +58,7 @@
     font-size: 38px;
     font-weight: 700;
     color: #fff;
-    text-shadow: 0 0 5px #bbb;
+    text-shadow: 0 0 5px #333;
 }
 .mark{
     position: absolute;
@@ -86,7 +86,7 @@
 .class-title{
     font-size: 15px;
     font-weight: 600;
-    padding: 8px 10px 18px;
+    padding: 8px 10px 15px;
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
@@ -95,7 +95,7 @@
 .class-instructor-wrap{
     display: flex;
     justify-content: space-between;
-    padding: 0 10px 5px;
+    padding: 0 10px 10px;
 }
 .instructor-spec{
     font-size: 13px;

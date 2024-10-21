@@ -28,8 +28,8 @@
     <meta name="theme-color" content="#ffffff" />
     <title>아트로크</title>
     <!-- css -->
-    <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <!-- js -->
     <script src="js/header.js"></script>
     <script src="js/main.js"></script>
@@ -305,18 +305,22 @@
           </div>
           <!-- 수강생 후기 -->
           <div class="review">
-            <button class="slide-prev">
-              <i class="fa-solid fa-chevron-left"></i>
-            </button>
-            <div class="review-container">
               <div class="review-top">
                 <h2>수강생 후기</h2>
-                <a href="#" class="moreBt"> 더보기 <i class="fa-regular fa-plus"></i> </a>
+                <div class="slide-nav">
+                  <a href="#" class="moreBt"> 더보기 <i class="fa-regular fa-plus"></i> </a>
+                  <button class="slide-prev">
+                    <i class="fa-solid fa-chevron-left"></i>
+                  </button>
+                  <button class="slide-next">
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </button>
+                </div>
               </div>
               <div class="review-area" id="data-review">
                 <div class="swiper sw-review">
                   <div class="swiper-wrapper">
-                    <!-- <div class="swiper-slide">
+                    <div class="swiper-slide">
                       <a href="#" class="review-wrap">
                         <div class="review-img">
                           <img src="images/review/1.png" alt="후기 이미지" />
@@ -330,19 +334,154 @@
                           <div class="review-content">기초 라인드로잉 강의를 수강한 후, 기본기를 제대로 다질 수 있어 매우 만족스럽습니다. 연필을 잡는 법부터 시작해서 선의 흐름을 어떻게 잡아야 하는지, 각도와 압력에 따른 다양한 표현 방법을 배울 수 있었습니다. 강의가 단계별로 나누어져 있어, 처음에 자신감이 없던 저도 차근차근 실력을 키울 수 있었습니다.</div>
                         </div>
                       </a>
-                    </div> -->
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <button class="slide-next">
-              <i class="fa-solid fa-chevron-right"></i>
-            </button>
           </div>
         </div>
       </div>
-      <!-- 인기 일반 강의 -->
-      <div class="normal-class"></div>
+      <!-- 공모전 소삭 -->
+      <div class="contest">
+        <div class="inner">
+          <div class="contest-left">
+            <h4 class="contest-left-title">진행중인<br>대회/공모전 소식</h4>
+            <p class="contest-left-info">아트로크에서<br>준비 및 도전을 함께 할 수 있는<br>공모전 리스트입니다!</p>
+            <a href="#" class="contest-more">
+              <p class="contest-more-text">더보기</p>
+              <img src="images/icon/contest-more.png" alt="">
+            </a>
+          </div>
+          <div class="contest-right" id="data-contest">
+            <div class="swiper sw-contest">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#" class="contests">
+                    <div class="contest-img">
+                      <img src="images/contest/contest_img1.jpg" alt="공모전 이미지">
+                    </div>
+                    <div class="contest-txt-wrap">
+                      <div class="contest-title">아이디어 디자인 공모전아이디어 디자인 공모전아이디어 디자인 공모전</div>
+                      <div class="contest-date-wrap">
+                        <div class="contest-Dday">D-14</div>
+                        <div class="contest-date">2024.10.06<br>~2024.11.30</div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="contests">
+                    <div class="contest-img">
+                      <img src="images/contest/contest_img1.jpg" alt="공모전 이미지">
+                    </div>
+                    <div class="contest-txt-wrap">
+                      <div class="contest-title">아이디어 디자인 공모전아이디어 디자인 공모전아이디어 디자인 공모전</div>
+                      <div class="contest-date-wrap">
+                        <div class="contest-Dday">D-14</div>
+                        <div class="contest-date">2024.10.06<br>~2024.11.30</div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="contests">
+                    <div class="contest-img">
+                      <img src="images/contest/contest_img1.jpg" alt="공모전 이미지">
+                    </div>
+                    <div class="contest-txt-wrap">
+                      <div class="contest-title">아이디어 디자인 공모전아이디어 디자인 공모전아이디어 디자인 공모전</div>
+                      <div class="contest-date-wrap">
+                        <div class="contest-Dday">D-14</div>
+                        <div class="contest-date">2024.10.06<br>~2024.11.30</div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="contests">
+                    <div class="contest-img">
+                      <img src="images/contest/contest_img1.jpg" alt="공모전 이미지">
+                    </div>
+                    <div class="contest-txt-wrap">
+                      <div class="contest-title">아이디어 디자인 공모전아이디어 디자인 공모전아이디어 디자인 공모전</div>
+                      <div class="contest-date-wrap">
+                        <div class="contest-Dday">D-14</div>
+                        <div class="contest-date">2024.10.06<br>~2024.11.30</div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="inner">
+          <div class="ft-top">
+            <div class="ft-top-left">
+              <div class="ft-logo"><a href="#">
+                <img src="images/logo/logo.png" alt="로고 이미지">
+              </a></div>
+              <ul class="intro-list">
+                <li><a href="#">
+                  회사소개
+                </a></li>
+                <li class="intro-PI"><a href="#">
+                  개인정보처리방침
+                </a></li>
+                <li><a href="#">
+                  이용약관
+                </a></li>
+                <li><a href="#">
+                  이용안내
+                </a></li>
+              </ul>
+            </div>
+            <div class="ft-top-right">
+              <div class="cs-title">고객 센터</div>
+              <div class="cs-info">오전 10시 ~ 오후 6시 (주말, 공휴일 제외)</div>
+              <div class="cs-btns">
+                <button class="csBtn"><a href="#">
+                  QnA
+                </a></button>
+                <button class="csBtn"><a href="#">
+                  1:1 문의
+                </a></button>
+              </div>
+            </div>
+          </div>
+          <div class="ft-bottom">
+            <div class="ft-bot-left">
+              <ul class="company-info">
+                <li>대표 : 가나다</li>
+                <li>주소 : 대구광역시 중구 109-2 4층</li>
+                <li>02-123-4567</li>
+              </ul>
+              <ul class="company-info">
+                <li>이메일 : asd123@artroke.co.kr</li>
+                <li>사업자등록번호 : 123-45-67890</li>
+              </ul>
+            </div>
+            <div class="ft-bot-right">
+              <ul class="sns-list">
+                <li><a href="#">
+                  <i class="fa-brands fa-twitter"></i>
+                </a></li>
+                <li><a href="#">
+                  <i class="fa-brands fa-instagram"></i>
+                </a></li>
+                <li><a href="#">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a></li>
+                <li><a href="#">
+                  <i class="fa-brands fa-youtube"></i>
+                </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>

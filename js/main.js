@@ -25,6 +25,9 @@ window.addEventListener("load", function () {
       // 수강생 후기
       REVIEW = obj.review;
       showReview()
+      // 공모전 소식
+      CONTEST = obj.contest;
+      showContest()
     }
   };
   xhttp.open("GET", "data.json");
@@ -182,21 +185,21 @@ window.addEventListener("load", function () {
     `
     REVIEW.forEach(function(item){
       let tag = `
-      <div class="swiper-slide">
-                      <a href="#" class="review-wrap">
-                        <div class="review-img">
-                          <img src="${item.img}" alt="후기 이미지" />
-                          <div class="review-ev">
-                            <p class="review-user-name">${item.userName}</p>
-                            <img src="images/review/5stars.png" alt="별점" />
-                          </div>
-                        </div>
-                        <div class="review-txt-wrap">
-                          <div class="review-class">${item.class}</div>
-                          
-                        </div>
-                      </a>
-                    </div>
+        <div class="swiper-slide">
+          <a href="#" class="review-wrap">
+            <div class="review-img">
+              <img src="${item.img}" alt="후기 이미지" />
+              <div class="review-ev">
+                <p class="review-user-name">${item.userName}</p>
+                <img src="images/review/5stars.png" alt="별점" />
+              </div>
+            </div>
+            <div class="review-txt-wrap">
+              <div class="review-class">${item.class}</div>
+              <div class="review-content">${item.content}</div>
+            </div>
+          </a>
+        </div>
       `
       html += tag;
     })
@@ -214,5 +217,66 @@ window.addEventListener("load", function () {
         nextEl: ".review .slide-next",
       },
     });
+  }
+  // 공모전 소식
+  let CONTEST;
+  let contestTag = this.document.getElementById("data-contest")
+  // 공모전 소식 화면 출력기능
+  function showContest(){
+    let html = `
+    <div class="swiper sw-contest">
+    <div class="swiper-wrapper">
+    `
+    CONTEST.forEach(function(item){
+      // console.log(item);
+      
+      function calculateDDay(targetDate) {
+        const today = new Date(); // 현재 날짜
+        const target = new Date(targetDate); // 목표 날짜
+        
+        // 두 날짜 사이의 차이 (밀리초 단위)
+        const difference = target - today;
+      
+        // 차이를 일(day) 단위로 변환
+        const daysLeft = Math.ceil(difference / (1000 * 60 * 60 * 24));
+        // console.log(daysLeft);
+        
+        if (daysLeft > 0) {
+          return `D-${daysLeft}`;
+        } else if (daysLeft === 0) {
+          return 'D-Day';
+        } else {
+          return `D+${Math.abs(daysLeft)}`; // 날짜가 지났을 경우
+        }
+      }
+      const targetDate = item.targetDate
+      // console.log(targetDate);
+      // D-Day 계산
+    const dDayText = calculateDDay(targetDate);
+      
+      let tag = `
+      <div class="swiper-slide">
+                  <a href="#" class="contests">
+                    <div class="contest-img">
+                      <img src="${item.img}" alt="공모전 이미지">
+                    </div>
+                    <div class="contest-txt-wrap">
+                      <div class="contest-title">${item.title}</div>
+                      <div class="contest-date-wrap">
+                        <div class="contest-Dday">${dDayText}</div>
+                        <div class="contest-date">${item.startDate}<br>~${item.endDate}</div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+      `
+      html += tag;
+    })
+    html += `</div></div>`
+    contestTag.innerHTML = html;
+    const swContest = new Swiper(".sw-contest",{
+      slidesPerView:4,
+      spaceBetween:10,
+    })
   }
 });
