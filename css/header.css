@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 .header {
   position: relative;
   width: 100vw;
@@ -127,22 +126,95 @@
 .search {
   margin-right: 35px;
   cursor: pointer;
+  width: 50%;
+  height: 30%;
 }
+.search-move {
+  position: relative;
+  width: 30%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 50px;
+}
+
+.search-move input {
+  width: 100%;
+  padding-right: 40px; /* 오른쪽에 아이콘 공간 확보 */
+  padding-left: 15px;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  box-sizing: border-box; /* 패딩 포함한 너비 계산 */
+  min-width: 500px;
+}
+#searchDelete {
+  position: fixed;
+  width: 100%;
+  top: 76px;
+  left: 0;
+  background-color: #fff;
+  margin: auto;
+  text-align: center;
+}
+#searchAfter {
+  position: absolute;
+  width: 100%;
+  left: 70%;
+  top: 50%;
+  transform: translateY(-50%); /* 수직 중앙 정렬 */
+  color: #999; /* 아이콘 색상 */
+  cursor: pointer; /* 아이콘 클릭 가능하도록 설정 */
+}
+
+#iconContainer {
+  width: 100% !important;
+  position: absolute;
+  top: 76px;
+  margin-left: 20px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 1000;
+  border-radius: 0 0 10px 10px;
+}
+#userInfoMid {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  padding: 0 10px;
+  line-height: 35px;
+}
+#logOut {
+  color: #ff370b;
+  margin-top: 40px;
+  cursor: pointer;
+}
+#noticeNone {
+  padding: 10px 0;
+}
+#teachList {
+  padding: 10px 0;
+}
+#teachList li {
+  font-size: 14px;
+  line-height: 30px;
+}
+
 @media screen and (max-width: 768px) {
   #iconContainer {
     width: 768px !important;
-    height: 55vh;
     position: absolute;
     top: 0;
     right: 0;
     background: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: none; /* 기본적으로 숨겨진 상태 */
-    z-index: 1000; /* 다른 요소 위에 나타나도록 설정 */
-    border-radius: 0 0 10px 10px; /* 하단 모서리 둥글게 */
+    display: none;
+    z-index: 1000;
+    border-radius: 0 0 10px 10px;
   }
   #userInfo {
-    display: flex;
+    display: flex !important;
     justify-content: space-between;
     padding: 0 50px;
     margin-top: 25px;
@@ -160,8 +232,9 @@
     margin: auto;
     text-align: center;
     line-height: 25px;
+    font-size: 15px;
   }
-  #userInfoSecond i{
+  #userInfoSecond i {
     font-size: 50px;
     margin-bottom: 5px;
   }
@@ -175,8 +248,7 @@
   #teachList p {
     float: right;
     text-align: center;
-    font-size: 15px;
-    padding-top: 3px;
+    font-size: 14px;
   }
   #teachList li {
     width: 100%;
@@ -184,10 +256,15 @@
     gap: 20px;
     text-align: center;
   }
+
   #notice {
     width: 100%;
     position: relative;
     display: block;
+    margin-bottom: 10px;
+  }
+  #line {
+    border: 1px solid #e9e9e9;
     margin-bottom: 10px;
   }
   #noticeNone {
@@ -196,6 +273,12 @@
     display: block;
     line-height: 30px;
     margin-bottom: 10px;
+  }
+  #InterestedList p {
+    margin-bottom: 10px;
+  }
+  #noticeNone li {
+    padding: 3px 0;
   }
   #InterestedList {
     margin-left: 15px;
@@ -206,21 +289,156 @@
     position: absolute;
     display: inline-block;
     bottom: 20px;
-    right: 20px;
+    right: 50px;
     color: #ff370b;
     cursor: pointer;
   }
-  #userInfoDelete{
+  #userInfoDelete {
     text-align: center;
     font-size: 30px;
     color: #777777;
   }
-  #userInfoNickName,#xhqslqkznl{
+  #userInfoNickName,
+  #xhqslqkznl {
     text-align: center;
     font-size: 30px;
   }
-  #userInfoDelete,#xhqslqkznl{
+  #userInfoDelete,
+  #xhqslqkznl {
     text-align: center;
     margin: auto 0;
+  }
+  #userInfoMid {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 0 50px;
+  }
+  #QandA {
+    margin-bottom: 70px;
+  }
+  #searchBar {
+    border: 1px solid #e9e9e9;
+  }
+}
+@media screen and (max-width: 320px) {
+  #iconContainer {
+    width: 320px !important;
+    position: absolute;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1000;
+    border-radius: 0 0 10px 10px;
+  }
+  #userInfo {
+    display: flex !important;
+    justify-content: space-between;
+    padding: 0 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  #userInfoNotice {
+    padding-left: 15px;
+    font-size: 18px;
+  }
+  #userInfoSecond {
+    width: 100%;
+    display: block;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    line-height: 25px;
+    margin-bottom: 20px;
+  }
+  #userInfoSecond i {
+    font-size: 50px;
+    margin-bottom: 5px;
+  }
+  #myTeach {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  #teachList {
+    margin-bottom: 15px;
+  }
+  #teachList p {
+    float: right;
+    text-align: center;
+    font-size: 14px;
+  }
+  #teachList li {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    text-align: center;
+  }
+
+  #notice {
+    width: 100%;
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+  }
+  #line {
+    border: 1px solid #e9e9e9;
+    margin-bottom: 10px;
+  }
+  #noticeNone {
+    width: 100%;
+    position: relative;
+    display: block;
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
+  #noticeNone li {
+    padding: 3px 0;
+  }
+  #InterestedList {
+    margin-left: 15px;
+    font-size: 15px;
+    line-height: 35px;
+  }
+  #InterestedList p {
+    margin-bottom: 10px;
+  }
+  #logOut {
+    position: absolute;
+    display: inline-block;
+    bottom: 20px;
+    right: 20px;
+    color: #ff370b;
+    cursor: pointer;
+  }
+  #userInfoDelete {
+    text-align: center;
+    font-size: 30px;
+    color: #777777;
+  }
+  #userInfoNickName,
+  #xhqslqkznl {
+    text-align: center;
+    font-size: 15px;
+  }
+  #userInfoDelete,
+  #xhqslqkznl {
+    text-align: center;
+    margin: auto 0;
+    font-size: 15px;
+  }
+  #userInfoMid {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 0 10px;
+    font-size: 15px;
+  }
+  #QandA {
+    margin-bottom: 70px;
+  }
+  #userInfoNotice {
+    padding-left: 15px;
+    font-size: 14px;
   }
 }
