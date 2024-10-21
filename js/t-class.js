@@ -11,7 +11,7 @@ window.addEventListener("load", function () {
       let obj = JSON.parse(str);
       // console.log(obj)
       //   일반강의
-      C_CLASS_LIST = obj.cclass;
+      C_CLASS_LIST = obj.tclass;
       // 일반강의 화면 배치
       show_C_class();
     }
@@ -92,14 +92,11 @@ window.addEventListener("load", function () {
       // console.log(sortedClasses);
     }
   });
-  // 강의 분야 클릭시 해당되는 강의 나타남=================================================================
-  const menuList = document.querySelectorAll(".fixed_menu_wrap ul li");
-  // console.log(menuList);
   menuList.forEach((menu) => {
     menu.addEventListener("click", function () {
       // 모든 메뉴에서 active 클래스 제거
       menuList.forEach((item) => item.classList.remove("active"));
-      
+
       // 현재 클릭된 메뉴에 active 클래스 추가
       menu.classList.add("active");
     });

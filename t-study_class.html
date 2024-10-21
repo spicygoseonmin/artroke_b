@@ -27,10 +27,6 @@
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
     <title>아트로크</title>
-
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/c_class.css" />
-
     <!-- Swiper 적용 -->
     <!-- link Swiper's css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
@@ -38,6 +34,11 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/c_class.css" />
+
+    <script src="js/t-class.js"></script>
   </head>
   <body>
     <div class="wrap">
@@ -45,7 +46,7 @@
         <div class="inner">
           <div class="header-left">
             <div class="logo">
-              <a href="#">
+              <a href="index.html">
                 <img src="images/logo/logo.png" alt="로고이미지" />
               </a>
             </div>
@@ -73,7 +74,7 @@
             <ul class="user-section">
               <!-- 로그인 버튼 -->
               <li id="login-btn">
-                <a href="#"> 로그인 </a>
+                <a href="login.html"> 로그인 </a>
               </li>
               <!-- 로그인했을떄 유저메뉴 -->
               <li id="user-profile">
@@ -125,21 +126,41 @@
       <div class="c-class">
         <div class="inner">
           <div class="c-class_menu">
-            <div class="title">입시강의</div>
-            <ul>
-              <li class="active">전체</li>
-              <li>소묘</li>
-              <li>서양화</li>
-              <li>동양화</li>
-              <li>디자인</li>
-              <li>조소</li>
-              <li>만화 / 애니메이션</li>
-            </ul>
+            <div class="fixed_menu_wrap">
+              <div class="title">실기강의</div>
+              <ul>
+                <li class="active" value="all">전체</li>
+                <li value="1_o_menu">소묘</li>
+                <li value="3_o_menu">서양화</li>
+                <li>동양화</li>
+                <li>디자인</li>
+                <li>만화 / 애니메이션</li>
+                <li>포토샵 / 일러스트레이터</li>
+              </ul>
+            </div>
           </div>
           <div class="c-class_list">
-            <div class="class_option"></div>
-            <div class="class_lists">
-              <ul>
+            <div class="class_option">
+              <div class="mobile_menu_list">
+                <select name="" id="">
+                  <option value="all">전체</option>
+                  <option value="1_o_menu">소묘</option>
+                  <option value="2_o_menu">서양화</option>
+                  <option value="3_o_menu">동양화</option>
+                  <option value="4_o_menu">디자인</option>
+                  <option value="5_o_menu">만화 / 애니메이션</option>
+                  <option value="6_o_menu">포토샵 / 일러스트레이터</option>
+                </select>
+              </div>
+              <div class="p_or_o">
+                <select class="p_or_o_select">
+                  <option value="s_open_num">개강순</option>
+                  <option value="s_popular_num">인기순</option>
+                </select>
+              </div>
+            </div>
+            <div class="class_lists" id="class_lists">
+              <!-- <ul id="c-class_list_ul">
                 <li>
                   <div class="img_wrap"></div>
                   <div class="text_wrap"></div>
@@ -164,7 +185,7 @@
                   <div class="img_wrap"></div>
                   <div class="text_wrap"></div>
                 </li>
-              </ul>
+              </ul> -->
             </div>
           </div>
         </div>
