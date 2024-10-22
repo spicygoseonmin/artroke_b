@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+.community-all .inner{
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+}
+.community-now,.community-week{
+    width: 100%;
+}
+.commu-list{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.commu-list>li{
+    display: flex;
+    justify-content: space-between;
+}
+.commu-cate{
+    margin-right: 5px;
+    color: #ff310b;
+    font-size: 14px;
+    font-weight: 500;
+}
+.commu-title-wrap{
+    display: flex;
+    align-items: center;
+}
+.commu-title a{
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+}
+.commu-title a:hover{
+    text-decoration: underline;
+}
+.commu-icon{
+    display: flex;
+    gap: 10px;
+    color: #999;
+}
