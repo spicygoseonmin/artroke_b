@@ -31,6 +31,7 @@
 }
 .menu {
   /* position: relative; */
+  width: 100%;
   display: flex;
   gap: 35px;
   font-weight: 700;
@@ -148,6 +149,9 @@
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+.headerleft{
+  margin: auto;
+}
 #searchAfter {
   position: absolute;
   right: 50px;
@@ -213,7 +217,7 @@
   font-size: 13px;
   border: 0;
 }
-#searchShow{
+#searchShow {
   top: 50%;
   left: 0;
   position: relative;
@@ -259,13 +263,19 @@
   font-size: 14px;
   line-height: 30px;
 }
-
+#loginText {
+  width: 60px;
+}
 @media screen and (max-width: 768px) {
+  .header-left{
+    margin: auto;
+    
+  }
   #iconContainer {
     width: 768px !important;
     position: absolute;
     top: 0;
-    right: 0;
+    right: -31px;
     background: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: none;
@@ -375,6 +385,9 @@
   }
   #QandA {
     margin-bottom: 70px;
+  }
+  .hidden {
+    display: none !important;
   }
 }
 @media screen and (max-width: 320px) {

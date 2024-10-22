@@ -119,10 +119,13 @@ input {
   cursor: pointer;
   border-radius: 5px;
   font-weight: bold;
-
+}
+#login-btn{
+  width: 60px;
 }
 
 /* 반응형 */
+
 @media screen and (max-width: 320px) {
   .container {
     width: 90%;
