@@ -147,7 +147,6 @@
   margin: auto;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
 }
 #searchAfter {
   position: absolute;
@@ -167,9 +166,9 @@
   display: block;
   margin-left: 36%;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
-#searchNow{
+#searchNow {
   margin-bottom: 50px;
 }
 #li {
@@ -177,31 +176,55 @@
   justify-content: space-between;
   margin-left: 33%;
   margin-right: 33%;
+  width: 50%;
 }
 #li li {
   padding: 0 60px;
   display: inline-block;
-text-align: left;
+  text-align: left;
 }
-#li li span{
+#li li span {
   color: #ff370b;
 }
-#popularKeywords #li li{
+#popularKeywords {
+  line-height: 30px;
+}
+#popularKeywords #li li {
   text-align: left;
   width: 100%;
 }
-#searchBar{
+#popularKeywords p:first-child {
+  text-align: left;
+  display: block;
+  margin-left: 36%;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+#searchBar {
   position: relative;
   display: block;
   width: 30vw;
   height: 45px;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   border-radius: 40px;
   padding-left: 20px;
   padding-right: 45px;
   line-height: 40px;
   font-size: 13px;
   border: 0;
+}
+#searchShow{
+  top: 50%;
+  left: 0;
+  position: relative;
+  display: block;
+  transform: translateY(-50%);
+}
+#searchXmark {
+  position: absolute;
+  display: block;
+  top: -10px;
+  right: -30px;
 }
 #iconContainer {
   width: 100% !important;
