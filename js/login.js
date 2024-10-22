@@ -2,6 +2,7 @@ window.addEventListener("load", function () {
   const loginText = document.getElementById("login"); // "로그인" 텍스트가 있는 요소
   const loginIcon = document.getElementById("loginIcon"); // 아이콘이 있는 요소
   const loginForm = this.document.getElementById("login-form");
+  const menu = this.document.querySelector(".menu")
  
   loginForm.addEventListener("submit", function (e) {
     e.preventDefault();
