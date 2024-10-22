@@ -15,6 +15,19 @@ window.addEventListener("load", function () {
   const teachList = this.document.getElementById("teachList");
   const searchShow = document.getElementById("searchShow");
   const searchDelete = document.getElementById("searchDelete");
+  const searchXmark = this.document.getElementById("searchXmark");
+
+  searchXmark.addEventListener("click", function () {
+    // 현재 display 상태를 확인하고 토글
+    if (searchDelete.style.display === "block") {
+        searchDelete.style.display = "none";
+        searchShow.style.display = "block";
+    } else {
+        searchShow.style.display = "block";
+        searchDelete.style.display = "none";
+    }
+});
+
 
   searchShow.addEventListener("click", function () {
     // 현재 display 상태를 확인하고 토글
@@ -23,7 +36,6 @@ window.addEventListener("load", function () {
     } else {
       searchDelete.style.display = "block";
       searchShow.style.display = "none";
-
     }
   });
   myTeach.addEventListener("click", function () {
