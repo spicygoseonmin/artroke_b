@@ -22,8 +22,20 @@
 }
 .my_menu > .my_menuList > li {
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
+.my_menu > .my_menuList > li > span {
+  width: 100%;
+  height: 25px;
+  display: none;
+  position: relative;
+  text-align: center;
+}
+.my_menu > .my_menuList > li > span > img {
+  height: 100%;
+}
 /* 공통 영역========================================================  */
 .scl,
 .sct,
@@ -40,11 +52,12 @@
 .option {
   width: 100%;
   height: 50%;
-  background-color: rgb(247, 247, 247);
+  /* background-color: rgb(247, 247, 247); */
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 5px;
+  padding: 10px 0;
 }
 .option > select {
   padding: 2px 10px;
@@ -61,6 +74,7 @@
   align-items: center;
   border-radius: 5px;
   font-size: 14px;
+  margin: 7vw 0;
 }
 .scl > .sclList > ul > li {
   width: 100%;
@@ -76,6 +90,7 @@
 }
 .scl > .sclList > ul > li > .top > .class_title {
   font-weight: 500;
+  cursor: pointer;
 }
 .scl > .sclList > ul > li > .top > .class_title > span {
   font-size: 14px;
@@ -91,6 +106,9 @@
   width: 100%;
   font-size: 14px;
   align-items: flex-end;
+}
+.scl > .sclList > ul > li > .bottom > .class_s_t {
+  cursor: pointer;
 }
 .scl > .sclList > ul > li > .bottom > .class_sd_day {
   font-size: 16px;
@@ -123,6 +141,7 @@
 }
 .sct > .sctList > ul > li > .top > .class_title {
   font-weight: 500;
+  cursor: pointer;
 }
 .sct > .sctList > ul > li > .top > .class_title > span {
   font-size: 14px;
@@ -139,7 +158,10 @@
   font-size: 14px;
   align-items: flex-end;
 }
-.sct > .sctList > ul > li > .bottom > .class_sd_day {
+.sct > .sctList > ul > li > .bottom > .class_s_t {
+  cursor: pointer;
+}
+.sct > .sctList > ul > li > .bottom > .class_sd_submit {
   font-size: 16px;
   font-weight: 600;
   color: #ff370b;
@@ -167,7 +189,26 @@
   font-size: 14px;
   color: #8f8f8f;
 }
-
+.submit_project_work {
+  width: 100%;
+  height: 300px;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px 0 #00000010;
+  overflow: hidden;
+  margin: 10px 0;
+  background-color: rgb(0, 0, 0);
+  display: none;
+}
+.submit_project_work > form {
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid #00000020;
+  background-color: rgb(255, 255, 255);
+}
 /* 결재수단 ===================================================================================*/
 .mpls {
   width: 100%;
@@ -200,6 +241,11 @@
   align-items: center;
   gap: 5px;
   padding: 5px 0;
+  margin: 10px 0;
+  cursor: pointer;
+}
+.point_explain > p:hover {
+  color: #1f1f1f;
 }
 .point_explain > p {
   font-size: 15px;
@@ -216,16 +262,193 @@
   width: 100%;
 }
 /* 포인트 스와이퍼 */
-.sw_point{
+.sw_point {
   width: 100%;
   height: 250px;
   /* background-color: #577cfd; */
 }
-.sw_point .swiper-slide{
+.sw_point .swiper-slide {
   background-color: #ff370b;
   border-radius: 5px;
   overflow: hidden;
 }
-.sw_point .swiper-slide > img{
-width: 100%;
+.sw_point .swiper-slide > img {
+  width: 100%;
+}
+
+@media screen and (max-width: 1232px) {
+  .my_page {
+    padding: 90px 15px 0 15px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .my_menu > .my_menuList > li > span {
+    display: block;
+  }
+  /* 공통영역 ============================================*/
+  .option > select {
+    padding: 0.4px 2vw;
+    border-radius: 50px;
+    font-size: 2.5vw;
+  }
+  /* 공통영역 ============================================*/
+  .my_page {
+    padding: 90px 2vw 0 2vw;
+  }
+  .my_menu > .my_menuList {
+    max-width: none;
+  }
+  .my_menu > .my_menuList > li {
+    font-size: 1.8vw;
+    gap: 1vw;
+    width: 100%;
+  }
+  .scl > .notice {
+    padding: 3vw;
+    font-size: 1.8vw;
+  }
+  .scl > .sclList > ul > li {
+    display: flex;
+    flex-direction: column;
+  }
+  .scl > .sclList > ul > li > .top {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+  .scl > .sclList > ul > li > .top > .class_title {
+    font-size: 2.3vw;
+  }
+  .scl > .sclList > ul > li > .top > .class_title > span {
+    font-size: 2.3vw;
+  }
+  .scl > .sclList > ul > li > .bottom > .class_s_t {
+    font-size: 2.1vw;
+    color: #696969;
+  }
+  .scl > .sclList > ul > li > .top > .class_s_day {
+    font-size: 2vw;
+    color: #9c9c9c;
+  }
+  .scl > .sclList > ul > li > .bottom > .class_sd_day {
+    font-size: 2.4vw;
+  }
+
+  /* 과제 제출 */
+  .sct > .sctList > ul > li > .top {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+  }
+  .sct > .sctList > ul > li > .middle > a {
+    padding: 1.2vw;
+    align-items: center;
+    gap: 10px;
+    row-gap: 10px;
+    column-gap: 10px;
+  }
+  .sct > .sctList > ul > li > .top > .class_title {
+    font-size: 2.3vw;
+  }
+  .sct > .sctList > ul > li > .top > .class_title > span {
+    font-size: 2.3vw;
+  }
+  .sct > .sctList > ul > li > .middle > .work_title {
+    font-size: 2.3vw;
+  }
+  .sct > .sctList > ul > li > .top > .class_s_day {
+    font-size: 2vw;
+    color: #9c9c9c;
+  }
+  /* 과제 다운로드 */
+  .sct > .sctList > ul > li > .middle {
+    padding: 1vw 0;
+  }
+  .sct > .sctList > ul > li > .middle > a {
+    gap: 1vw;
+  }
+  .sct > .sctList > ul > li > .middle > a > .download_icon {
+    font-size: 2.3vw;
+  }
+  .sct > .sctList > ul > li > .middle > a > .download_title {
+    font-size: 2vw;
+  }
+  .sct > .sctList > ul > li > .bottom > .class_s_t {
+    font-size: 2.1vw;
+    color: #696969;
+  }
+  .sct > .sctList > ul > li > .bottom > .class_sd_submit {
+    font-size: 2.4vw;
+  }
+}
+@media screen and (max-width: 420px) {
+  .my_menu > .my_menuList > li > span {
+    display: block;
+    width: 100%;
+    height: 6vw;
+  }
+  /* ===================================== */
+  .my_menu > .my_menuList {
+    padding: 3vw 0;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 3vw;
+  }
+  .my_menu > .my_menuList > li {
+    width: calc(100% / 4 - 3vw);
+    font-size: 2vw;
+  }
+  .scl > .sclList > ul > li > .top > .class_title {
+    font-size: 3vw;
+  }
+  .scl > .sclList > ul > li > .top > .class_title > span {
+    font-size: 3vw;
+  }
+  .scl > .sclList > ul > li > .bottom > .class_s_t {
+    font-size: 2.5vw;
+    color: #696969;
+  }
+  .scl > .sclList > ul > li > .top > .class_s_day {
+    font-size: 2.5vw;
+    color: #9c9c9c;
+  }
+  .scl > .sclList > ul > li > .bottom > .class_sd_day {
+    font-size: 3vw;
+  }
+
+  /* 과제 제출 */
+  .sct > .sctList > ul > li > .top > .class_title {
+    font-size: 3vw;
+  }
+  .sct > .sctList > ul > li > .top > .class_title > span {
+    font-size: 3vw;
+  }
+  .sct > .sctList > ul > li > .middle > .work_title {
+    font-size: 2.7vw;
+  }
+  .sct > .sctList > ul > li > .top > .class_s_day {
+    font-size: 2.5vw;
+    color: #9c9c9c;
+  }
+  /* 과제 다운로드 */
+  .sct > .sctList > ul > li > .middle {
+    padding: 1vw 0;
+  }
+  .sct > .sctList > ul > li > .middle > a {
+    gap: 1vw;
+  }
+  .sct > .sctList > ul > li > .middle > a > .download_icon {
+    font-size: 3vw;
+  }
+  .sct > .sctList > ul > li > .middle > a > .download_title {
+    font-size: 2.5vw;
+  }
+  .sct > .sctList > ul > li > .bottom > .class_s_t {
+    font-size: 2.7vw;
+    color: #696969;
+  }
+  .sct > .sctList > ul > li > .bottom > .class_sd_submit {
+    font-size: 3vw;
+  }
 }

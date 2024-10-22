@@ -12,8 +12,10 @@ window.addEventListener("load", function () {
       // console.log(obj)
       //   일반강의
       C_CLASS_LIST = obj.tclass;
+      // 강의를 rank 순으로 정렬한 후 출력
+      const sortedClasses = [...C_CLASS_LIST].sort((a, b) => a.rank - b.rank);
       // 일반강의 화면 배치
-      show_C_class();
+      show_C_class(sortedClasses);
     }
   };
   //   자료호출

@@ -32,8 +32,10 @@
 
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/my_menu.css" />
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 
     <script src="js/my_menu.js"></script>
+    <script src="js/my_menu_jq.js"></script>
     <!-- Swiper 적용 -->
     <!-- link Swiper's css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
@@ -191,12 +193,24 @@
           <!-- 메뉴 -->
           <div class="my_menu">
             <ul class="my_menuList">
-              <li>수강 중인 목록</li>
-              <li>과제 제출</li>
-              <li>문의 / 답변</li>
-              <li>관심 목록</li>
-              <li>결재 수단</li>
-              <li>포인트</li>
+              <li>
+                <span><img src="images/icon/my_page/project_submit_icon.png" alt="과제제출_모바일_아이콘" /></span>수강 중인 목록
+              </li>
+              <li>
+                <span><img src="images/icon/my_page/project_submit_icon.png" alt="과제제출_모바일_아이콘" /></span>과제 제출
+              </li>
+              <li>
+                <span><img src="images/icon/my_page/comment_icon.png" alt="문의답변_모바일_아이콘" /></span>문의 / 답변
+              </li>
+              <li>
+                <span><img src="images/icon/my_page/bookmark_list_icon.png" alt="관심목록_모바일_아이콘" /></span>관심 목록
+              </li>
+              <li>
+                <span><img src="images/icon/my_page/pay_icon.png" alt="결재수단_모바일_아이콘" /></span>결재 수단
+              </li>
+              <li>
+                <span><img src="images/icon/my_page/point_icon.png" alt="포인트_모바일_아이콘" /></span>포인트
+              </li>
             </ul>
           </div>
           <div class="menu_page">
@@ -290,13 +304,17 @@
                     </div>
                     <div class="bottom">
                       <div class="class_s_t">디자인실기 | 이진수</div>
-                      <div class="class_sd_day">제출하기</div>
-                      <div class="submit_project_work">
-                        <form>
-                          <input type="text">
-                          <label for=""></label>
-                        </form>
-                      </div>
+                      <div class="class_sd_submit">제출하기</div>
+                    </div>
+                    <div class="submit_project_work">
+                      <form>
+                        <label for="title">제목</label>
+                        <input type="text" id="title" />
+                        <label for="memo">메모</label>
+                        <input type="text" id="memo" />
+                        <label for="work">제출</label>
+                        <input type="file" id="work" />
+                      </form>
                     </div>
                   </li>
                   <li>
@@ -314,7 +332,17 @@
                     </div>
                     <div class="bottom">
                       <div class="class_s_t">디자인실기 | 이진수</div>
-                      <div class="class_sd_day">제출하기</div>
+                      <div class="class_sd_submit">제출하기</div>
+                    </div>
+                    <div class="submit_project_work">
+                      <form>
+                        <label for="title">제목</label>
+                        <input type="text" id="title" />
+                        <label for="memo">메모</label>
+                        <input type="text" id="memo" />
+                        <label for="work">제출</label>
+                        <input type="file" id="work" />
+                      </form>
                     </div>
                   </li>
                   <li>
@@ -332,7 +360,17 @@
                     </div>
                     <div class="bottom">
                       <div class="class_s_t">디자인실기 | 이진수</div>
-                      <div class="class_sd_day">제출하기</div>
+                      <div class="class_sd_submit">제출하기</div>
+                    </div>
+                    <div class="submit_project_work">
+                      <form>
+                        <label for="title">제목</label>
+                        <input type="text" id="title" />
+                        <label for="memo">메모</label>
+                        <input type="text" id="memo" />
+                        <label for="work">제출</label>
+                        <input type="file" id="work" />
+                      </form>
                     </div>
                   </li>
                 </ul>
@@ -363,21 +401,19 @@
             <div class="pointL mp">
               <div class="point_wrap">
                 <div class="point_title">보유포인트</div>
-                <div class="total_h_point">
-                  0p
-                </div>
+                <div class="total_h_point">0p</div>
               </div>
               <div class="point_explain">
-                <span class="point_icon"><img src="images/icon/point_icon.png" alt="포인트_인포_아이콘"></span>
+                <span class="point_icon"><img src="images/icon/point_icon.png" alt="포인트_인포_아이콘" /></span>
                 <p>포인트를 사용할수 있는 곳은?</p>
               </div>
               <!-- 포인트 슬라이드 -->
               <div class="point_mh_s">
                 <div class="swiper sw_point">
                   <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="images/banner/point_banner_1.png" alt="카카오_포인트_베너"></div>
-                    <div class="swiper-slide"><img src="images/banner/point_banner_2.png" alt="토스_포인트_배너"></div>
-                    <div class="swiper-slide"><img src="images/banner/point_banner_3.png" alt="친구초대_포인트_배너"></div>
+                    <div class="swiper-slide"><img src="images/banner/point_banner_1.png" alt="카카오_포인트_베너" /></div>
+                    <div class="swiper-slide"><img src="images/banner/point_banner_2.png" alt="토스_포인트_배너" /></div>
+                    <div class="swiper-slide"><img src="images/banner/point_banner_3.png" alt="친구초대_포인트_배너" /></div>
                     <div class="swiper-slide">Slide 4</div>
                     <div class="swiper-slide">Slide 5</div>
                   </div>

@@ -12,8 +12,10 @@ window.addEventListener("load", function () {
       // console.log(obj)
       //   일반강의
       C_CLASS_LIST = obj.cclass;
+      // 강의를 rank 순으로 정렬한 후 출력
+      const sortedClasses = [...C_CLASS_LIST].sort((a, b) => a.rank - b.rank);
       // 일반강의 화면 배치
-      show_C_class();
+      show_C_class(sortedClasses);
     }
   };
   //   자료호출
@@ -51,6 +53,7 @@ window.addEventListener("load", function () {
     html += `</ul>`;
     classList.innerHTML = html;
   }
+
   const btn_m = this.document.querySelectorAll(".m_js > li");
   btn_m.forEach(function (btn_ms, index) {
     btn_ms.addEventListener("click", function () {
