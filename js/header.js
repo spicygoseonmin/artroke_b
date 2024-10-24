@@ -17,11 +17,61 @@ window.addEventListener("load", function () {
   const searchDelete = document.getElementById("searchDelete");
   const searchXmark = document.getElementById("searchXmark");
   const menu = document.querySelector(".menu");
-  const userInfoDelete = this.document.getElementById("userInfoDelete")
+  const userInfoDelete = this.document.getElementById("userInfoDelete");
+  const cateNomal = document.getElementById("cateNomal");
+  const cateAllList = document.getElementById("cateAllList");
+  const cateHard = this.document.getElementById("cateHard");
+  const catelistHard = this.document.querySelectorAll(".catelistHard");
+  const cateBar = document.getElementById("cateBar");
+  const cateBarClick = document.getElementById("cateBarClick");
+  const cateLeft = document.getElementById("cateLeft");
+  const people = this.document.querySelector(".fa-solid fa-user")
 
-  userInfoDelete.addEventListener("click",function(){
-    iconContainer.style.display="none"
-  })
+  loginIcon.addEventListener("click", function () {
+    // iconContainer의 display 상태를 토글합니다.
+    if (iconContainer.style.display === "block") {
+      iconContainer.style.display = "none";
+    } else {
+      iconContainer.style.display = "block";
+    }
+  });
+  
+
+  cateBar.addEventListener("click", function () {
+    if (cateBarClick.style.display === "block") {
+      cateBarClick.style.display = "none";
+    } else {
+      cateBarClick.style.display = "block";
+    }
+  });
+
+  // cateLeft 클릭 시 cateBarClick 숨기기
+  cateLeft.addEventListener("click", function () {
+    cateBarClick.style.display = "none";
+  });
+
+  cateHard.addEventListener("click", function () {
+    catelistHard.forEach((item) => {
+      // console.log(item);
+      if (item.style.display === "block") {
+        item.style.display = "none";
+      } else {
+        item.style.display = "block";
+      }
+    });
+  });
+
+  cateNomal.addEventListener("click", function () {
+    if (cateAllList.style.display === "block") {
+      cateAllList.style.display = "none";
+    } else {
+      cateAllList.style.display = "block";
+    }
+  });
+
+  userInfoDelete.addEventListener("click", function () {
+    iconContainer.style.display = "none";
+  });
   searchXmark.addEventListener("click", function () {
     if (searchDelete.style.display === "block") {
       searchDelete.style.display = "none";
@@ -39,7 +89,7 @@ window.addEventListener("load", function () {
       searchDelete.style.display = "block";
     }
   });
-  
+
   myTeach.addEventListener("click", function () {
     if (teachList.style.display === "block") {
       teachList.style.display = "none";
@@ -64,25 +114,7 @@ window.addEventListener("load", function () {
 
   if (userFind) {
     loginText.style.display = "none";
-    loginIcon.style.display = "none"; 
-
-    let loginNickName = document.getElementById("loginNickName");
-    if (!loginNickName) {
-      loginNickName = document.createElement("span");
-      loginNickName.id = "loginNickName";
-      loginNickName.style.display = "inline-block";
-      loginText.parentNode.insertBefore(loginNickName, loginText);
-    }
-    loginNickName.textContent = userFind.usernickname;
-
-    loginNickName.addEventListener("click", function (e) {
-      e.stopPropagation(); 
-      if (iconContainer.style.display === "none" || iconContainer.style.display === "") {
-        iconContainer.style.display = "block";
-      } else {
-        iconContainer.style.display = "none";
-      }
-    });
+    loginIcon.style.display = "block";
 
     userInfoNickName.textContent = `${userFind.usernickname} 님 환영합니다!`;
     userInfoId.textContent = `UserId : ${userFind.userName}`;
@@ -96,16 +128,16 @@ window.addEventListener("load", function () {
 
   logOut.addEventListener("click", function (e) {
     e.preventDefault();
-    e.stopPropagation(); 
+    e.stopPropagation();
     localStorage.removeItem("userFind");
 
     loginText.style.display = "inline-block";
     loginIcon.style.display = "none";
     const loginNickName = document.getElementById("loginNickName");
     if (loginNickName) loginNickName.style.display = "none";
-    userInfoNickName.textContent = ""; 
-    userInfoId.textContent = ""; 
-    userInfoEmail.textContent = ""; 
+    userInfoNickName.textContent = "";
+    userInfoId.textContent = "";
+    userInfoEmail.textContent = "";
     iconContainer.style.display = "none";
     alert("로그아웃이 완료되었습니다.");
   });
@@ -115,16 +147,15 @@ window.addEventListener("load", function () {
       // 768px 이하일 때 userInfoSecond 보이기
       userInfo.style.display = "block";
       userInfoSecond.style.display = "block";
-   
     } else {
       // 768px 이상일 때 userInfoSecond 숨기기
-      userInfo.style.display = "none"; 
+      userInfo.style.display = "none";
       userInfoSecond.style.display = "none";
     }
     if (window.innerWidth <= 768) {
-      menu.classList.add('hidden');
+      menu.classList.add("hidden");
     } else {
-      menu.classList.remove('hidden');
+      menu.classList.remove("hidden");
     }
   }
 
@@ -142,17 +173,17 @@ window.addEventListener("load", function () {
     cateBack.classList.toggle("active");
     searchDelete.style.display = "none";
   });
-  
+
   cateBack.addEventListener("click", function () {
     cateBack.classList.remove("active");
     cateBox.classList.remove("active");
   });
-  
+
   const headerLogo = document.querySelector(".logo");
   headerLogo.addEventListener("click", function () {
     window.location.href = "index.html";
   });
-  
+
   const loginMove = document.getElementById("login-btn");
   loginMove.addEventListener("click", function () {
     window.location.href = "login.html";

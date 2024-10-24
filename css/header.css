@@ -1,4 +1,5 @@
 @charset "utf-8";
+
 .header {
   position: relative;
   width: 100vw;
@@ -22,6 +23,9 @@
   position: relative;
   display: flex;
   align-items: center;
+}
+#cateBar{
+  display: none;
 }
 .logo {
   height: 50%;
@@ -122,12 +126,13 @@
   display: flex;
   align-items: center;
   font-weight: 700;
+  width: 130px;
 }
 /*  */
 .search {
   margin-right: 35px;
   cursor: pointer;
-  width: 50%;
+
   height: 30%;
 }
 .search-move {
@@ -148,10 +153,9 @@
   margin: auto;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
-.headerleft{
-  margin: auto;
-}
+
 #searchAfter {
   position: absolute;
   right: 50px;
@@ -164,6 +168,13 @@
   font-size: 0;
   display: block;
   border: 0;
+}
+#searchList {
+  position: relative;
+  display: block;
+  left: 0;
+  top: 0;
+  margin-left: 80px;
 }
 #searchDelete p {
   text-align: left;
@@ -183,7 +194,7 @@
   width: 50%;
 }
 #li li {
-  padding: 0 60px;
+  padding: 0;
   display: inline-block;
   text-align: left;
 }
@@ -203,6 +214,7 @@
   margin-left: 36%;
   margin-top: 20px;
   margin-bottom: 30px;
+  position: relative;
 }
 #searchBar {
   position: relative;
@@ -234,6 +246,7 @@
   width: 100% !important;
   position: absolute;
   top: 76px;
+  right: 30px;
   margin-left: 20px;
   background: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -254,7 +267,11 @@
   cursor: pointer;
 }
 #noticeNone {
-  padding: 10px 0;
+  padding: 5px 0;
+  font-size: 16px;
+}
+#noticeNone li p{
+  font-size: 14px;
 }
 #teachList {
   padding: 10px 0;
@@ -267,10 +284,212 @@
   width: 60px;
 }
 @media screen and (max-width: 768px) {
-  .header-left{
-    margin: auto;
-    
+  #searchList{
+    position: relative;
+    display: block;
+    left: 0;
+    top: 0;
+    margin-left: 66px;
   }
+  #cateBarClick {
+    width: 768px;
+    height: 100%;
+    position: relative;
+    display: block;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 5px 5px 0px;
+    border-radius: 5px;
+    z-index: 99999;
+    padding-bottom: 20px;
+    padding-top: 25px;
+  }
+  #cateBarClickMenuTop {
+    position: relative;
+    display: flex;
+    padding-top: 20px;
+    margin-bottom: 70px;
+  
+  }
+  #cateBarClickMenuTop h2{
+    position: relative;
+    left: 40%;
+    transform: translateX(-45%);
+  }
+  #catelistHard{
+    display: none;
+  }
+  .catelistHard{
+    margin-bottom: 5px;
+  }
+  #cateLeft {
+    width: 12px;
+    height: 27px;
+    padding-top: 7px;
+    margin-left: 40px;
+  }
+  #cateAll{
+    margin-left: 30px;
+  }
+  
+  #cateline{
+    border: 0.5px solid #eee;
+    margin: 10px 0;
+  }
+  #cateNomal{
+    position: relative;
+    display: block;
+  }
+  #cateNomalListLeft{
+    display: block;
+    float: left;
+    width: 100px;
+    line-height: 25px;
+  }
+  #cateNomalListRight{
+    margin-left: 40%;
+    width: 200px;
+    line-height: 25px;
+  }
+  #cateHardList{
+    display: none;
+  }
+  #catelisthard{
+    margin-bottom: 50px;
+  }
+  #cateAllList{
+    display: flex;
+    position: relative;
+    display: none;
+    margin-bottom: 50px;
+  }
+  #cateLeft img{
+    width: 100%;
+    height: 100%;
+  }
+  #cateBar {
+    position: relative;
+    display: none;
+  }
+
+  .logo {
+    height: 50%;
+    /* margin: auto; */
+    left: 65%;
+    display: block;
+    position: relative;
+    padding-left: 10px;
+  }
+  #cateBar {
+    display: block;
+    padding-left: 40px;
+  }
+  #searchDelete {
+    position: fixed;
+    width: 100%;
+    top: 70px;
+    left: 0;
+    background-color: #fff;
+    margin: auto;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .header-left {
+    height: 100%;
+    width: 43%;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .header-right {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    width: 130px;
+
+  }
+  #searchAfter {
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    background: url(../images/btnSearch.png) no-repeat center;
+    cursor: pointer;
+    font-size: 0;
+    display: block;
+    border: 0;
+  }
+  #searchDelete p {
+    text-align: left;
+    display: block;
+    margin-left: 27%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  #popularKeywords p:first-child {
+    text-align: left;
+    display: block;
+    margin-left: 27%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  #searchNow {
+    margin-bottom: 50px;
+  }
+  #li {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20%;
+    margin-right: 33%;
+    width: 50%;
+  }
+  #li li {
+    padding: 0;
+    display: inline-block;
+    text-align: left;
+  }
+  #li li span {
+    color: #ff370b;
+  }
+  #popularKeywords {
+    line-height: 30px;
+  }
+  #popularKeywords #li li {
+    text-align: left;
+    width: 100%;
+  }
+
+  #searchBar {
+    position: relative;
+    display: block;
+    width: 50vw;
+    height: 45px;
+    background-color: #f6f6f6;
+    border-radius: 40px;
+    padding-left: 20px;
+    padding-right: 45px;
+    line-height: 40px;
+    font-size: 13px;
+    border: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #searchShow {
+    top: 50%;
+    left: 0;
+    position: relative;
+    display: block;
+    transform: translateY(-50%);
+  }
+  #searchXmark {
+    position: absolute;
+    display: block;
+    top: -10px;
+    right: -100px;
+  }
+
   #iconContainer {
     width: 768px !important;
     position: absolute;
@@ -370,7 +589,7 @@
   #userInfoNickName,
   #xhqslqkznl {
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
   }
   #userInfoDelete,
   #xhqslqkznl {
@@ -391,9 +610,150 @@
   }
 }
 @media screen and (max-width: 320px) {
+
+  #cateBarClick {
+    width: 320px;
+    height: 100%;
+    position: relative;
+    display: block;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 5px 5px 0px;
+    border-radius: 5px;
+    z-index: 99999;
+    padding-bottom: 20px;
+    padding-top: 5px;
+  }
+  #cateBarClickMenuTop {
+    position: relative;
+    display: flex;
+    padding-top: 20px;
+    margin-bottom: 70px;
+  
+  }
+  #cateAll h3{
+    font-size: 14px;
+  }
+  #cateNomalListLeft li,#cateNomalListRight li{
+    font-size: 13px;
+  }
+
+  .catelistHard{
+    font-size: 14px;
+    padding-left: 5px;
+  }
+  #cateBarClickMenuTop h2{
+    position: relative;
+    left: 40%;
+    transform: translateX(-45%);
+    padding-top: 5px;
+  }
+  #catelistHard{
+    display: none;
+  }
+  #cateLeft {
+    width: 12px;
+    height: 30px;
+    padding-top: 7px;
+    margin-left: 15px;
+  }
+  #cateAll{
+    margin-left: 20px;
+  }
+  
+  #cateline{
+    border: 0.5px solid #eee;
+    margin: 10px 0;
+  }
+  #cateNomal{
+    position: relative;
+    display: block;
+  }
+  #cateNomalListLeft{
+    display: block;
+    float: left;
+    width: 100px;
+  }
+  #cateNomalListRight{
+    margin-left:50%;
+    width: 200px;
+  }
+  #cateHardList{
+    display: none;
+  }
+  #catelisthard{
+    margin-bottom: 50px;
+  }
+  #cateAllList{
+    display: flex;
+    position: relative;
+    display: none;
+    margin-bottom: 50px;
+    padding-left: 5px;
+  }
+  #cateLeft img{
+    width: 100%;
+    height: 100%;
+  }
+  #cateBar {
+    position: relative;
+    display: none;
+  }
+
+  .container {
+    width: 90%;
+    margin: auto;
+    position: relative;
+    display: block;
+  }
+  .logo {
+    height: 50%;
+    /* margin: auto; */
+    left: 77%;
+    display: block;
+    position: relative;
+    padding-left: 10px;
+  }
+  .header-left {
+    height: 70%;
+    width: 15%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+  }
+  #cateBar {
+    display: block;
+    padding: 0;
+  }
+  #searchShow {
+    top: 60%;
+    left: 0;
+    position: relative;
+    display: block;
+    transform: translateY(-50%);
+  }
+  .header-right {
+    width: 105px;
+    font-size: 12px;
+    right: -30px;
+    gap: 20px;
+    padding-top: 10px;
+    padding-left: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  .search {
+    margin-right: 0;
+    cursor: pointer;
+    height: 27%;
+  }
   #iconContainer {
     width: 320px !important;
     position: absolute;
+    top: 0;
+    right: 11px;
     background: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: none;
@@ -405,9 +765,64 @@
     justify-content: space-between;
     padding: 0 50px;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
-
+  #searchBar {
+    position: relative;
+    display: block;
+    width: 85vw;
+    height: 35px;
+    background-color: #f6f6f6;
+    border-radius: 40px;
+    padding-left: 20px;
+    padding-right: 45px;
+    line-height: 40px;
+    font-size: 13px;
+    border: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #searchAfter {
+    position: absolute;
+    right: -70px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    background: url(../images/btnSearch.png) no-repeat center;
+    background-size: 15px 15px;
+    cursor: pointer;
+    display: block;
+    border: 0;
+  }
+  #searchDelete p {
+    text-align: left;
+    display: block;
+    margin-left: 10%;
+    margin-top: 20px;
+    margin-bottom: 17px;
+  }
+  #popularKeywords p:first-child {
+    text-align: left;
+    display: block;
+    margin-left: 10%;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  #searchList {
+    position: relative;
+    display: block;
+    left: 0;
+    top: 0;
+    margin-left: 25px;
+  }
+  #li {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2%;
+    margin-right: 33%;
+    width: 100%;
+  }
   #userInfoNotice {
     padding-left: 15px;
     font-size: 18px;
@@ -422,12 +837,13 @@
     margin-bottom: 20px;
   }
   #userInfoSecond i {
-    font-size: 50px;
+    font-size: 30px;
     margin-bottom: 5px;
   }
   #myTeach {
     width: 100%;
     margin-bottom: 10px;
+    font-size: 13px;
   }
   #teachList {
     margin-bottom: 15px;
@@ -435,13 +851,15 @@
   #teachList p {
     float: right;
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
   }
   #teachList li {
     width: 100%;
     display: flex;
     gap: 20px;
     text-align: center;
+    font-size: 12px;
+
   }
 
   #notice {
@@ -449,6 +867,7 @@
     position: relative;
     display: block;
     margin-bottom: 10px;
+    font-size: 13px;
   }
   #line {
     border: 1px solid #e9e9e9;
@@ -463,6 +882,9 @@
   }
   #noticeNone li {
     padding: 3px 0;
+  }
+  #noticeNone li p{
+    font-size: 12px;
   }
   #InterestedList {
     margin-left: 15px;
