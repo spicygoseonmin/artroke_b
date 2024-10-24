@@ -5,6 +5,30 @@ window.addEventListener("load", function () {
     spaceBetween: 16, // 슬라이드 간의 간격
   });
 
+  function updateSwiperSpaceBetween_a() {
+    if (window.innerWidth <= 768) {
+      sw_point.params.slidesPerView = 2.3; // 너비가 560px 이하일 때 간격 7
+      sw_point.params.spaceBetween = 10; // 너비가 560px 이하일 때 간격 7
+    } else {
+      sw_point.params.slidesPerView = 3.4; // 기본 간격 16
+      sw_point.params.spaceBetween = 16; // 너비가 560px 이하일 때 간격 7
+    }
+    sw_point.update(); // 변경 사항 업데이트
+  }
+  function updateSwiperSpaceBetween_b() {
+    if (window.innerWidth <= 420) {
+      sw_point.params.slidesPerView = 1.3; // 너비가 560px 이하일 때 간격 7
+      sw_point.params.spaceBetween = 8; // 너비가 560px 이하일 때 간격 7
+    }
+    sw_point.update(); // 변경 사항 업데이트
+  }
+
+  window.addEventListener("resize", updateSwiperSpaceBetween_a);
+  updateSwiperSpaceBetween_a(); // 처음 로드될 때도 적용
+  window.addEventListener("resize", updateSwiperSpaceBetween_b);
+  updateSwiperSpaceBetween_b(); // 처음 로드될 때도 적용
+
+  // 메뉴 클릭시 화면 나타남
   const my_menu = this.document.querySelectorAll(".my_menuList > li");
   const menu_page = this.document.querySelectorAll(".menu_page > .mp");
 
@@ -28,40 +52,49 @@ window.addEventListener("load", function () {
       menu_page[index].classList.add("active");
     });
   });
-  const coupon = document.getElementById("coupon-box");
-  const button = document.getElementById("payment-button");
-  const amount = 50000;
 
-  // 구매자의 고유 아이디를 불러와서 customerKey로 설정하세요.
-  // 이메일・전화번호와 같이 유추가 가능한 값은 안전하지 않습니다.
-  const widgetClientKey = "test_gck_docs_Ovk5rk1EwkEbP0W43n07xlzm";
-  const customerKey = "o6oZTVeixwIgyRubjs-F-";
-  const paymentWidget = PaymentWidget(widgetClientKey, customerKey); // 회원 결제
-  // const paymentWidget = PaymentWidget(widgetClientKey, PaymentWidget.ANONYMOUS) // 비회원 결제
+  // 과제 제출 유효성 검사
+  const project_work_form = document.querySelectorAll(".project_work_form");
+  project_work_form.forEach(function (project_work_forms) {
+    project_work_forms.addEventListener("submit", function (event) {
+      event.preventDefault();
+      // 사용자가 입력한 사용자명과 비밀번호를 가져온다
+      const title = document.querySelector(".title");
+      const memo = document.querySelector(".memo");
+      const work = document.querySelector(".work");
+      const s_p_title = title.value.trim();
+      const s_p_memo = memo.value.trim();
+      const s_p_img = work.value.trim();
+      // console.log(username ,password);
+      // 사용자명과 비밀번호의 유효성을 정규 표현식을 사용
+      //   사용자명은 영문자와 숫자로만 이루어져야 합니다.하여 확인합니다.
+      const img_thumbnail_ul = document.querySelectorAll(".img_thumbnail > ul");
+      img_thumbnail_ul.forEach(function (uls) {
+        uls.addEventListener("change", function () {
+          const show_img = `
+                <li><img src="${s_p_img}" alt="${s_p_title}"></li>
+          `;
+          this.innerHTML = show_img
+        });
+      });
 
-  const paymentMethodWidget = paymentWidget.renderPaymentMethods("#payment-method", { value: amount }, { variantKey: "DEFAULT" });
-
-  paymentWidget.renderAgreement("#agreement", { variantKey: "AGREEMENT" });
-
-  coupon.addEventListener("change", function () {
-    if (coupon.checked) {
-      paymentMethodWidget.updateAmount(amount - 5000);
-    } else {
-      paymentMethodWidget.updateAmount(amount);
-    }
-  });
-
-  button.addEventListener("click", function () {
-    // 결제를 요청하기 전에 orderId, amount를 서버에 저장하세요.
-    // 결제 과정에서 악의적으로 결제 금액이 바뀌는 것을 확인하는 용도입니다.
-    paymentWidget.requestPayment({
-      orderId: "w9Gv2zpCNrt_-aUg7xp6z",
-      orderName: "토스 티셔츠 외 2건",
-      successUrl: window.location.origin + "/success",
-      failUrl: window.location.origin + "/fail",
-      customerEmail: "customer123@gmail.com",
-      customerName: "김토스",
-      customerMobilePhone: "01012341234",
+      img_thumbnail_ul.innerHTML = show_img;
+      const subWorks = {
+        s_p_title: s_p_title,
+        s_p_memo: s_p_memo,
+        s_p_img: s_p_img,
+      };
+      // console.log(newUser);//{username: 'ha12', password: '123456778'}
+      // 로컬 스토리지에 사용자 정보를 저장합니다.
+      // 이전에 로컬 스토리지에 저장된 사용자 정보를 가져오기 위해 localStorage.getItem("users")를 사용합니다.
+      // 만약에 사용자 정보가 없다면 빈 배열 ([])를 기본 값으로 사용
+      const usersWork = JSON.parse(localStorage.getItem("usersWork")) || [];
+      // 새로운 사용자 객체 newUser 를 이전 사용자 정보에 배열에 (users)를 추가
+      usersWork.push(subWorks);
+      // 사용자 정보 배열을 JSON 형식으로 문자열화하고,이를 로컬 스토리지에 users라는 키로 저장
+      localStorage.setItem("usersWork", JSON.stringify(usersWork));
+      // alert("가입이 완료 되었습니다. 로그인 페이지로 이동합니다.");
+      // window.location.href = "login.html";
     });
   });
 });
