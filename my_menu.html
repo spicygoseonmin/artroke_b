@@ -309,20 +309,22 @@
                     </div>
                     <div class="submit_project_work">
                       <div class="submit_project_work_wrap">
-                        <form class="project_work_form">
-                          <label for="title">제목</label>
-                          <input type="text" class="title" name="title" required />
-                          <label for="memo">메모</label>
-                          <input type="text" class="memo" name="memo" />
-                          <label for="work">이미지 제출</label>
-                          <input type="file" class="work" name="work" required />
-                          <button type="submit" class="p_w_sub_btn">과제 제출하기</button>
+                        <form class="project_work_form" enctype="multipart/form-data">
+                          <div class="form_wrap">
+                            <label for="title">제목</label>
+                            <input type="text" class="title" name="title" required />
+                            <label for="memo">메모</label>
+                            <input type="text" class="memo" name="memo" />
+                            <label for="work">이미지 제출</label>
+                            <input type="file" class="work" name="work" accept="image/*" required />
+                            <button type="submit" class="p_w_sub_btn">과제 제출하기</button>
+                          </div>
+                          <div class="img_thumbnail">
+                            <ul class="thumbnail_list">
+                              <!-- js 출력 -->
+                            </ul>
+                          </div>
                         </form>
-                        <div class="img_thumbnail">
-                          <ul>
-                            <!-- js 출력 -->
-                          </ul>
-                        </div>
                       </div>
                     </div>
                   </li>

@@ -68,17 +68,29 @@ window.addEventListener("load", function () {
       // console.log(username ,password);
       // 사용자명과 비밀번호의 유효성을 정규 표현식을 사용
       //   사용자명은 영문자와 숫자로만 이루어져야 합니다.하여 확인합니다.
-      const img_thumbnail_ul = document.querySelectorAll(".img_thumbnail > ul");
-      img_thumbnail_ul.forEach(function (uls) {
-        uls.addEventListener("change", function () {
-          const show_img = `
-                <li><img src="${s_p_img}" alt="${s_p_title}"></li>
-          `;
-          this.innerHTML = show_img
-        });
-      });
+      // const thumbnailList = document.querySelector(".img_thumbnail > .thumbnail_list");
+      // work.addEventListener("change", function (e) {
+      //   thumbnailList.innerHTML = ``;
+      //   const files = work.files;
 
-      img_thumbnail_ul.innerHTML = show_img;
+      //   for (let i = 0; i < files.length; i++) {
+      //     const file = files[i];
+      //     const reader = new FileReader();
+
+      //     reader.onload = function (e) {
+      //       // 썸네일 이미지를 생성하여 리스트에 추가
+      //       const li = document.createElement("li");
+      //       const img = document.createElement("img");
+      //       img.src = e.target.result;
+      //       // img.style.width = "100px"; // 썸네일 크기 지정
+      //       // img.style.height = "100px"; // 썸네일 크기 지정
+      //       li.appendChild(img);
+      //       thumbnailList.appendChild(li);
+      //     };
+      //     reader.readAsDataURL(file);
+      //   }
+      // });
+
       const subWorks = {
         s_p_title: s_p_title,
         s_p_memo: s_p_memo,

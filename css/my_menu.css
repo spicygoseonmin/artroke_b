@@ -230,12 +230,17 @@
   background-color: rgb(0, 0, 0);
   display: none;
 }
-.submit_project_work > .submit_project_work_wrap{
+.submit_project_work > .submit_project_work_wrap {
   width: 100%;
   height: 100%;
   display: flex;
 }
 .submit_project_work > .submit_project_work_wrap > form {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.submit_project_work > .submit_project_work_wrap > form > .form_wrap {
   width: 100%;
   max-width: 600px;
   height: 100%;
@@ -246,10 +251,10 @@
   border: 1px solid #00000020;
   background-color: rgb(255, 255, 255);
 }
-.submit_project_work > .submit_project_work_wrap > form > input {
+.submit_project_work > .submit_project_work_wrap > form > .form_wrap > input {
   margin-top: 5px;
 }
-.submit_project_work > .submit_project_work_wrap > form > .p_w_sub_btn {
+.submit_project_work > .submit_project_work_wrap > form > .form_wrap > .p_w_sub_btn {
   padding: 10px;
   margin-top: 80px;
   background-color: #000;
@@ -257,7 +262,7 @@
   border: none;
   border-radius: 5px;
 }
-.submit_project_work > .submit_project_work_wrap > .img_thumbnail {
+.submit_project_work > .submit_project_work_wrap > form > .img_thumbnail {
   width: 100%;
   height: 100%;
   background-color: #577cfd;
