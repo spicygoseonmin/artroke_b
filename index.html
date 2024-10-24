@@ -30,10 +30,10 @@
     <!-- css -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/main.css" />
-
+    <link rel="stylesheet" href="css/b-banner.css">
     <!-- js -->
     <script src="js/header.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main-b.js"></script>
     <!-- Swiper 적용 -->
     <!-- link Swiper's css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
@@ -47,7 +47,6 @@
       <header class="header">
         <div class="inner">
           <div class="header-left">
-            <i class="fa-solid fa-bars" id="cateBar"></i>
             <div class="logo">
               <a href="#">
                 <img src="images/logo/logo.png" alt="로고이미지" />
@@ -85,23 +84,21 @@
                 <p>최근 검색어</p>
                 <ul id="popularKeywords">
                   <p>실시간 인기 검색어</p>
-                  <div id="searchList">
-                    <div id="li">
-                      <li><span>1</span> 프로크리에이트</li>
-                      <li><span>5</span> 피그마</li>
-                    </div>
-                    <div id="li">
-                      <li><span>2</span> 일러스트</li>
-                      <li><span>6</span> 입시미술</li>
-                    </div>
-                    <div id="li">
-                      <li><span>3</span> 소묘</li>
-                      <li><span>7</span> 나무13</li>
-                    </div>
-                    <div id="li">
-                      <li><span>4</span> 아이패드</li>
-                      <li><span>8</span> 이모티콘</li>
-                    </div>
+                  <div id="li">
+                    <li><span>1</span> 프로크리에이트</li>
+                    <li><span>5</span> 피그마</li>
+                  </div>
+                  <div id="li">
+                    <li><span>2</span> 일러스트</li>
+                    <li><span>6</span> 입시미술</li>
+                  </div>
+                  <div id="li">
+                    <li><span>3</span> 소묘</li>
+                    <li><span>7</span> 나무13</li>
+                  </div>
+                  <div id="li">
+                    <li><span>4</span> 아이패드</li>
+                    <li><span>8</span> 이모티콘</li>
                   </div>
                 </ul>
               </div>
@@ -114,7 +111,6 @@
               </li>
               <i class="fa-solid fa-user" id="loginIcon"></i>
               <!-- 로그인했을떄 유저메뉴 -->
-              <i class="fa-solid fa-user" style="display: none"></i>
               <li id="user-profile">
                 <!-- 유저 아이디 출력 -->
               </li>
@@ -218,89 +214,46 @@
           </div>
         </div>
       </header>
-      <!-- 반응형 강의 카테고리 -->
-      <div id="cateBarClick" style="display: none">
-        <div id="cateBarClickMenuTop">
-          <div id="cateLeft">
-            <img src="images/left.png" alt="강의카테고리 왼쪽화살표" />
-          </div>
-          <h2>강의 카테고리</h2>
-        </div>
-        <div id="cateAll">
-          <ul>
-            <li>
-              <h3 id="cateNomal">
-                일반강의
-                <i class="fa-solid fa-chevron-down"></i>
-              </h3>
-              <div id="cateline"></div>
-              <div id="cateAllList">
-                <ul id="cateNomalListLeft">
-                  <li>소묘</li>
-                  <li>수채화</li>
-                  <li>유화</li>
-                  <li>아크릴화</li>
-                  <li>디지털 드로잉</li>
-                  <li>조소/모델링</li>
-                </ul>
-                <ul id="cateNomalListRight">
-                  <li>만화 / 애니메이션</li>
-                  <li>공예</li>
-                  <li>포토샵 / 일러스트레이터</li>
-                  <li>이모티콘 제작</li>
-                  <li>종이접기</li>
-                  <li>뜨게질</li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <h3 id="cateHard">
-                실기강의
-                <i class="fa-solid fa-chevron-down"></i>
-              </h3>
-            </li>
-            <div id="cateline"></div>
-            <li class="catelistHard" style="display: none">소묘</li>
-            <li class="catelistHard" style="display: none">서양화</li>
-            <li class="catelistHard" style="display: none">동양화</li>
-            <li class="catelistHard" style="display: none">디자인</li>
-            <li class="catelistHard" style="display: none">조소</li>
-            <li class="catelistHard" style="display: none">만화/애니메이션</li>
-            <li class="catelistHard" id="catelisthard" style="display: none">포토샵/일러스트레이터</li>
-          </ul>
-          <h3 id="academy">학원소개</h3>
-          <div id="cateline"></div>
-          <h3>커뮤니티</h3>
-          <div id="cateline"></div>
-          <h3>뉴스</h3>
-          <div id="cateline"></div>
-          <h3>강사진소개</h3>
-        </div>
-      </div>
-      <div class="visual">
-        <img src="images/banner/visual.png" alt="비주얼 이미지" />
-        <div class="student-work">
-          <div class="swiper sw-student">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="student-work-img">
-                  <img src="images/" alt="" />
-                </div>
-              </div>
+      <!-- 배너 -->
+      <div class="b-banenr">
+        <div class="swiper sw-Bbanner">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#" class="B-banner-img">
+                <img src="images/b-banner/b-1.png" alt="b안 배너 이미지">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="B-banner-img">
+                <img src="images/b-banner/b-2.png" alt="b안 배너 이미지">
+              </a>
             </div>
           </div>
         </div>
       </div>
-
+      <div class="b-mbanenr">
+        <div class="swiper sw-Bmbanner">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#" class="B-banner-img">
+                <img src="images/b-banner/b-m1.png" alt="b안 배너 이미지">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="B-banner-img">
+                <img src="images/b-banner/b-m2.png" alt="b안 배너 이미지">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- 인기 실기 강의 -->
       <div class="practice-class">
         <div class="inner">
           <div class="class-top">
             <h2>인기 실기·입시용 강의</h2>
             <div class="slide-nav">
-              <a href="#" class="moreBt"> 더보기 <i class="fa-regular fa-plus"></i> </a>
+              <a href="t-study_class.html" class="moreBt"> 더보기 <i class="fa-regular fa-plus"></i> </a>
               <button class="slide-prev">
                 <i class="fa-solid fa-chevron-left"></i>
               </button>
@@ -345,7 +298,7 @@
           <div class="class-top">
             <h2>인기 취미·입문용 강의</h2>
             <div class="slide-nav">
-              <a href="#" class="moreBt"> 더보기 <i class="fa-regular fa-plus"></i> </a>
+              <a href="c_study_class.html" class="moreBt"> 더보기 <i class="fa-regular fa-plus"></i> </a>
               <button class="slide-prev">
                 <i class="fa-solid fa-chevron-left"></i>
               </button>
@@ -426,9 +379,9 @@
         </div>
       </div> -->
       <!-- 배너 -->
-      <div class="banner">
+      <!-- <div class="banner">
         <div class="banner-slide" id="data-banner">
-          <!-- <div class="swiper sw-banner">
+          <div class="swiper sw-banner">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <a href="#" class="banner-img">
@@ -446,9 +399,9 @@
                 </a>
               </div>
             </div>
-          </div> -->
+          </div>
         </div>
-      </div>
+      </div> -->
       <!-- 금주의 소식, 수강생 후기 -->
       <div class="community">
         <div class="inner">
