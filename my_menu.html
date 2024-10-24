@@ -36,6 +36,7 @@
 
     <script src="js/my_menu.js"></script>
     <script src="js/my_menu_jq.js"></script>
+    <!-- <script src="js/my_menu_pay.js"></script> -->
     <!-- Swiper 적용 -->
     <!-- link Swiper's css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
@@ -197,7 +198,7 @@
                 <span><img src="images/icon/my_page/project_submit_icon.png" alt="과제제출_모바일_아이콘" /></span>수강 중인 목록
               </li>
               <li>
-                <span><img src="images/icon/my_page/project_submit_icon.png" alt="과제제출_모바일_아이콘" /></span>과제 제출
+                <span><img src="images/icon/my_page/check_icon.png" alt="과제제출_모바일_아이콘" /></span>과제 제출
               </li>
               <li>
                 <span><img src="images/icon/my_page/comment_icon.png" alt="문의답변_모바일_아이콘" /></span>문의 / 답변
@@ -307,13 +308,50 @@
                       <div class="class_sd_submit">제출하기</div>
                     </div>
                     <div class="submit_project_work">
-                      <form>
+                      <div class="submit_project_work_wrap">
+                        <form class="project_work_form">
+                          <label for="title">제목</label>
+                          <input type="text" class="title" name="title" required />
+                          <label for="memo">메모</label>
+                          <input type="text" class="memo" name="memo" />
+                          <label for="work">이미지 제출</label>
+                          <input type="file" class="work" name="work" required />
+                          <button type="submit" class="p_w_sub_btn">과제 제출하기</button>
+                        </form>
+                        <div class="img_thumbnail">
+                          <ul>
+                            <!-- js 출력 -->
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="top">
+                      <div class="class_title">팀플로 성장하는 발상과 표현 클래스 5기 <span>과제제출 미완</span></div>
+                      <div class="class_s_day">2025. 12. 01 까지 제출</div>
+                    </div>
+                    <!-- 제출란 -->
+                    <div class="middle">
+                      <div class="work_title">과제: 식물의 구조를 응용하여 발상과 디자인 스케치 구상하기</div>
+                      <a href="#">
+                        <div class="download_icon"><i class="fa-solid fa-file-arrow-down"></i></div>
+                        <div class="download_title">디자인 주제 사진 및 예시작</div>
+                      </a>
+                    </div>
+                    <div class="bottom">
+                      <div class="class_s_t">디자인실기 | 이진수</div>
+                      <div class="class_sd_submit">제출하기</div>
+                    </div>
+                    <div class="submit_project_work">
+                      <form class="project_work_form">
                         <label for="title">제목</label>
-                        <input type="text" id="title" />
+                        <input type="text" class="title" name="title" required />
                         <label for="memo">메모</label>
-                        <input type="text" id="memo" />
-                        <label for="work">제출</label>
-                        <input type="file" id="work" />
+                        <input type="text" class="memo" name="memo" />
+                        <label for="work">이미지 제출</label>
+                        <input type="file" class="work" name="work" required />
+                        <button type="submit">과제 제출하기</button>
                       </form>
                     </div>
                   </li>
@@ -335,41 +373,14 @@
                       <div class="class_sd_submit">제출하기</div>
                     </div>
                     <div class="submit_project_work">
-                      <form>
+                      <form class="project_work_form">
                         <label for="title">제목</label>
-                        <input type="text" id="title" />
+                        <input type="text" class="title" name="title" required />
                         <label for="memo">메모</label>
-                        <input type="text" id="memo" />
-                        <label for="work">제출</label>
-                        <input type="file" id="work" />
-                      </form>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="top">
-                      <div class="class_title">팀플로 성장하는 발상과 표현 클래스 5기 <span>과제제출 미완</span></div>
-                      <div class="class_s_day">2025. 12. 01 까지 제출</div>
-                    </div>
-                    <!-- 제출란 -->
-                    <div class="middle">
-                      <div class="work_title">과제: 식물의 구조를 응용하여 발상과 디자인 스케치 구상하기</div>
-                      <a href="#">
-                        <div class="download_icon"><i class="fa-solid fa-file-arrow-down"></i></div>
-                        <div class="download_title">디자인 주제 사진 및 예시작</div>
-                      </a>
-                    </div>
-                    <div class="bottom">
-                      <div class="class_s_t">디자인실기 | 이진수</div>
-                      <div class="class_sd_submit">제출하기</div>
-                    </div>
-                    <div class="submit_project_work">
-                      <form>
-                        <label for="title">제목</label>
-                        <input type="text" id="title" />
-                        <label for="memo">메모</label>
-                        <input type="text" id="memo" />
-                        <label for="work">제출</label>
-                        <input type="file" id="work" />
+                        <input type="text" class="memo" name="memo" />
+                        <label for="work">이미지 제출</label>
+                        <input type="file" class="work" name="work" required />
+                        <button type="submit">과제 제출하기</button>
                       </form>
                     </div>
                   </li>
@@ -386,7 +397,6 @@
                 <!-- 결재수단 등록 -->
                 <div class="top">
                   <div class="payList">
-                    <!-- 할인 쿠폰 -->
                     <!-- 결제 UI, 이용약관 UI 영역 -->
                     <div id="payment-method"></div>
                     <div id="agreement"></div>
@@ -424,6 +434,69 @@
         </div>
       </div>
       <!-- 푸터 -->
+      <footer class="footer">
+        <div class="inner">
+          <div class="ft-top">
+            <div class="ft-top-left">
+              <div class="ft-logo">
+                <a href="#">
+                  <img src="images/logo/logo.png" alt="로고 이미지" />
+                </a>
+              </div>
+              <ul class="intro-list">
+                <li><a href="#"> 회사소개 </a></li>
+                <li class="intro-PI"><a href="#"> 개인정보처리방침 </a></li>
+                <li><a href="#"> 이용약관 </a></li>
+                <li><a href="#"> 이용안내 </a></li>
+              </ul>
+            </div>
+            <div class="ft-top-right">
+              <div class="cs-title">고객 센터</div>
+              <div class="cs-info">오전 10시 ~ 오후 6시 (주말, 공휴일 제외)</div>
+              <div class="cs-btns">
+                <button class="csBtn"><a href="#"> QnA </a></button>
+                <button class="csBtn"><a href="#"> 1:1 문의 </a></button>
+              </div>
+            </div>
+          </div>
+          <div class="ft-bottom">
+            <div class="ft-bot-left">
+              <ul class="company-info">
+                <li>대표 : 가나다</li>
+                <li>주소 : 대구광역시 중구 109-2 4층</li>
+              </ul>
+              <ul class="company-info">
+                <li>이메일 : asd123@artroke.co.kr</li>
+                <li>사업자등록번호 : 123-45-67890</li>
+              </ul>
+            </div>
+            <div class="ft-bot-right">
+              <ul class="sns-list">
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
