@@ -104,6 +104,11 @@
     .ft-top-right{
         margin-top: 30px;
     }
+    .inner{
+        padding: 0 20px;
+    }
+}
+@media screen and (max-width: 767px) {
 }
 @media screen and (max-width:620px) {
     .ft-top-left{
