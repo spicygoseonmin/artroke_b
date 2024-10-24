@@ -1,8 +1,7 @@
 window.addEventListener("load", function () {
   const loginText = document.getElementById("login"); // "로그인" 텍스트가 있는 요소
-  const loginIcon = document.getElementById("loginIcon"); // 아이콘이 있는 요소
+  const loginIcon = document.getElementById("logoImg"); // 아이콘이 있는 요소
   const loginForm = this.document.getElementById("login-form");
-  const menu = this.document.querySelector(".menu")
  
   loginForm.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -29,7 +28,7 @@ window.addEventListener("load", function () {
     window.location.href = "sign_up.html";
   });
   const logo = this.document.querySelector(".logo")
-  logo.addEventListener("click", function () {
+  loginIcon.addEventListener("click", function () {
     window.location.href = "index.html";
   });
   const logoImg = this.document.getElementById("logoImg");

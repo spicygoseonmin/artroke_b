@@ -8,6 +8,34 @@
 input {
   padding-left: 30px;
 }
+
+#signUpHeader{
+  width: 100%;
+  height: 180px;
+  background-color: #333;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+#signHeaderImg{
+  width: 130px;
+  height: 130px;
+}
+#signHeaderImg img{
+  width: 100%;
+  height: 100%;
+}
+#signHeaderImgInfo{
+  padding-left: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+}
+#signHeaderImgInfo p:last-child{
+  font-size: 25px;
+}
+
 .container {
   width: 90%;
   max-width: 480px;
@@ -16,6 +44,7 @@ input {
   position: relative;
   display: block;
 }
+
 #sign-form {
   width: 100%;
   position: relative;
@@ -26,7 +55,7 @@ input {
   position: relative;
   display: block;
   width: 60%;
-  margin: 100px auto 50px auto;
+  margin: 50px auto 50px auto;
   cursor: pointer;
 }
 #logoImg img {
@@ -64,6 +93,7 @@ form #userId,
   border-radius: 5px;
   margin: 7px auto;
   font-size: 15px;
+  border: 1px solid black;
 }
 #userNumber {
   width: 90%;
@@ -85,9 +115,11 @@ form #userId,
   border-radius: 5px;
   margin: 7px auto;
   font-size: 15px;
+  border: 1px solid black;
 }
 #phonNumber input {
   margin: auto;
+  border: 1px solid black;
 }
 h2 {
   margin: 25px 0;
@@ -116,6 +148,7 @@ h2 {
   padding: 12px 0;
   border-radius: 5px;
   cursor: pointer;
+  border: 0;
 }
 #phonNumber {
   display: flex;
@@ -158,12 +191,71 @@ ul li label {
 #login-btn{
   width: 60px;
 }
+@media screen and (max-width:768px){
+  #signUpHeader{
+    width: 100%;
+    height: 120px;
+    background-color: #333;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  }
+  #signHeaderImg{
+    width: 90px;
+    height: 90px;
+  }
+  #signHeaderImg img{
+    width: 100%;
+    height: 100%;
+  }
+  #signHeaderImgInfo{
+    padding-left: 20px;
+    font-size: 23px;
+    font-weight: bold;
+    color: #fff;
+  }
+  #signHeaderImgInfo p:last-child{
+    font-size: 16px;
+  }
+  
+.header-left .menu{
+  display: none;
+}
+}
 @media screen and (max-width: 320px) {
-  .container {
-    width: 90%;
-    margin: 5px;
+  #signUpHeader{
+    width: 100%;
+    height: 70px;
+    background-color: #333;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  }
+  #signHeaderImg{
+    width: 50px;
+    height: 50px;
+  }
+  #signHeaderImg img{
+    width: 100%;
+    height: 100%;
+  }
+  #signHeaderImgInfo{
+    padding-left: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+  }
+  #signHeaderImgInfo p:last-child{
+    font-size: 11px;
+  }
+  
+
+  .signUp .logo{
     position: relative;
     display: block;
+    left: 50px;
   }
   input {
     padding-left: 30px;
@@ -178,7 +270,7 @@ ul li label {
     position: relative;
     display: block;
     width: 60%;
-    margin: 50px auto 50px auto;
+    margin: 35px auto 35px auto;
     cursor: pointer;
   }
   #logoImg img {
@@ -229,6 +321,7 @@ ul li label {
   }
   #phonNumber input {
     margin: auto;
+    border: 1px solid black;
   }
   h2 {
     margin: 25px 0 15px 0;
